@@ -1,0 +1,76 @@
+{
+	"theme": "跳繩體能訓練",
+	"presets": [
+		{
+			"name": "初階節奏跳繩",
+			"steps": [
+				{ "name": "暖身跳步", "seconds": 180 },
+				{ "name": "基本單跳", "seconds": 60 },
+				{ "name": "休息", "seconds": 30 },
+				{ "name": "左右換腳跳", "seconds": 60 },
+				{ "name": "休息", "seconds": 30 },
+				{ "name": "高抬膝跳", "seconds": 60 },
+				{ "name": "休息", "seconds": 30 },
+				{ "name": "雙腳並跳", "seconds": 60 },
+				{ "name": "緩和伸展", "seconds": 180 }
+			]
+		},
+		{
+			"name": "間歇燃脂跳繩 20 分鐘",
+			"steps": [
+				{ "name": "動態暖身", "seconds": 240 },
+				{ "name": "快速雙腳跳 45 秒", "seconds": 45 },
+				{ "name": "休息", "seconds": 30 },
+				{ "name": "交叉跳 45 秒", "seconds": 45 },
+				{ "name": "休息", "seconds": 30 },
+				{ "name": "雙搖跳 30 秒", "seconds": 30 },
+				{ "name": "休息", "seconds": 30 },
+				{ "name": "後踢腿跳 45 秒", "seconds": 45 },
+				{ "name": "休息", "seconds": 60 },
+				{ "name": "核心訓練與伸展", "seconds": 240 }
+			]
+		},
+		{
+			"name": "速度挑戰（競速跳）",
+			"steps": [
+				{ "name": "暖身與腳踝啟動", "seconds": 180 },
+				{ "name": "速度測試 30 秒", "seconds": 30 },
+				{ "name": "休息", "seconds": 30 },
+				{ "name": "速度挑戰第二輪", "seconds": 30 },
+				{ "name": "休息", "seconds": 30 },
+				{ "name": "速度挑戰第三輪", "seconds": 30 },
+				{ "name": "休息與調息", "seconds": 60 },
+				{ "name": "敏捷梯或小步快踏", "seconds": 120 },
+				{ "name": "伸展放鬆", "seconds": 180 }
+			]
+		},
+		{
+			"name": "團隊跳繩課程 30 分鐘",
+			"steps": [
+				{ "name": "集合與器材檢查", "seconds": 120 },
+				{ "name": "團體暖身與協調練習", "seconds": 300 },
+				{ "name": "基本節奏同步訓練", "seconds": 240 },
+				{ "name": "組合步伐與變化", "seconds": 240 },
+				{ "name": "轉換練習與互換夥伴", "seconds": 180 },
+				{ "name": "團體接力挑戰", "seconds": 240 },
+				{ "name": "放鬆與分享回饋", "seconds": 180 }
+			]
+		},
+		{
+			"name": "跳繩+自體重混合課",
+			"steps": [
+				{ "name": "暖身與跳躍啟動", "seconds": 240 },
+				{ "name": "跳繩 1 分鐘", "seconds": 60 },
+				{ "name": "伏地挺身 45 秒", "seconds": 45 },
+				{ "name": "休息", "seconds": 30 },
+				{ "name": "跳繩 1 分鐘", "seconds": 60 },
+				{ "name": "深蹲 45 秒", "seconds": 45 },
+				{ "name": "休息", "seconds": 30 },
+				{ "name": "跳繩 1 分鐘", "seconds": 60 },
+				{ "name": "平板支撐 45 秒", "seconds": 45 },
+				{ "name": "休息與伸展", "seconds": 180 }
+			]
+		}
+	]
+}
+

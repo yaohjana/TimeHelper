@@ -1,0 +1,62 @@
+{
+	"theme": "讀書步調規劃",
+	"presets": [
+		{
+			"name": "SQ3R 閱讀法",
+			"steps": [
+				{ "name": "Survey 略讀全章", "seconds": 300 },
+				{ "name": "Question 擬定問題", "seconds": 240 },
+				{ "name": "Read 精讀段落", "seconds": 900 },
+				{ "name": "Recite 回想要點", "seconds": 300 },
+				{ "name": "Review 複習整理", "seconds": 300 }
+			]
+		},
+		{
+			"name": "番茄鐘 4 迴圈",
+			"steps": [
+				{ "name": "第一輪專注", "seconds": 1500 },
+				{ "name": "短暫休息", "seconds": 300 },
+				{ "name": "第二輪專注", "seconds": 1500 },
+				{ "name": "短暫休息", "seconds": 300 },
+				{ "name": "第三輪專注", "seconds": 1500 },
+				{ "name": "短暫休息", "seconds": 300 },
+				{ "name": "第四輪專注", "seconds": 1500 },
+				{ "name": "長休息", "seconds": 900 }
+			]
+		},
+		{
+			"name": "考前衝刺 90 分鐘",
+			"steps": [
+				{ "name": "複習重點列表", "seconds": 600 },
+				{ "name": "題目演練組 1", "seconds": 1500 },
+				{ "name": "檢討摘要", "seconds": 420 },
+				{ "name": "題目演練組 2", "seconds": 1500 },
+				{ "name": "短休與伸展", "seconds": 300 },
+				{ "name": "總結與記憶卡片", "seconds": 780 }
+			]
+		},
+		{
+			"name": "深度閱讀 + 摘要",
+			"steps": [
+				{ "name": "預覽與設定目標", "seconds": 420 },
+				{ "name": "段落精讀", "seconds": 900 },
+				{ "name": "筆記標註", "seconds": 600 },
+				{ "name": "整理思維導圖", "seconds": 600 },
+				{ "name": "簡短休息", "seconds": 300 },
+				{ "name": "口頭複述與產出", "seconds": 600 }
+			]
+		},
+		{
+			"name": "專題研究模組",
+			"steps": [
+				{ "name": "蒐集資料與分類", "seconds": 900 },
+				{ "name": "閱讀整合", "seconds": 900 },
+				{ "name": "歸納整理重點", "seconds": 600 },
+				{ "name": "撰寫草稿", "seconds": 900 },
+				{ "name": "同儕回饋/自我檢查", "seconds": 600 },
+				{ "name": "修改定稿", "seconds": 900 }
+			]
+		}
+	]
+}
+

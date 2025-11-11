@@ -1,0 +1,81 @@
+{
+	"theme": "多元體適能訓練",
+	"presets": [
+		{
+			"name": "HIIT 全身燃脂 20 分鐘",
+			"steps": [
+				{ "name": "暖身動態伸展", "seconds": 300 },
+				{ "name": "波比跳 40 秒", "seconds": 40 },
+				{ "name": "休息 20 秒", "seconds": 20 },
+				{ "name": "登山者 40 秒", "seconds": 40 },
+				{ "name": "休息 20 秒", "seconds": 20 },
+				{ "name": "跳躍箭步蹲 40 秒", "seconds": 40 },
+				{ "name": "休息 20 秒", "seconds": 20 },
+				{ "name": "平板撐肩觸碰 40 秒", "seconds": 40 },
+				{ "name": "休息 20 秒", "seconds": 20 },
+				{ "name": "高抬腿 40 秒", "seconds": 40 },
+				{ "name": "休息 60 秒", "seconds": 60 },
+				{ "name": "核心呼吸調整", "seconds": 180 }
+			]
+		},
+		{
+			"name": "核心穩定循環 15 分鐘",
+			"steps": [
+				{ "name": "貓牛瑜伽暖身", "seconds": 120 },
+				{ "name": "平板支撐", "seconds": 60 },
+				{ "name": "側平板（左）", "seconds": 45 },
+				{ "name": "側平板（右）", "seconds": 45 },
+				{ "name": "死蟲 Dead Bug", "seconds": 60 },
+				{ "name": "臀橋", "seconds": 60 },
+				{ "name": "休息", "seconds": 60 },
+				{ "name": "超人伸展", "seconds": 60 },
+				{ "name": "呼吸放鬆", "seconds": 90 }
+			]
+		},
+		{
+			"name": "功能性訓練循環",
+			"steps": [
+				{ "name": "暖身跑步機或跳躍", "seconds": 240 },
+				{ "name": "壺鈴深蹲", "seconds": 60 },
+				{ "name": "伏地挺身", "seconds": 60 },
+				{ "name": "壺鈴划船", "seconds": 60 },
+				{ "name": "弓步扭轉", "seconds": 60 },
+				{ "name": "戰繩揮動", "seconds": 45 },
+				{ "name": "休息", "seconds": 45 },
+				{ "name": "側移滑步", "seconds": 60 },
+				{ "name": "核心滾輪", "seconds": 45 },
+				{ "name": "伸展整理操", "seconds": 180 }
+			]
+		},
+		{
+			"name": "爆發力訓練（Plyometrics）",
+			"steps": [
+				{ "name": "動態暖身與預防性伸展", "seconds": 240 },
+				{ "name": "箱跳", "seconds": 45 },
+				{ "name": "休息", "seconds": 30 },
+				{ "name": "側向跨步跳", "seconds": 45 },
+				{ "name": "休息", "seconds": 30 },
+				{ "name": "溜冰滑步跳", "seconds": 45 },
+				{ "name": "休息", "seconds": 30 },
+				{ "name": "單腳下落反彈", "seconds": 45 },
+				{ "name": "休息", "seconds": 60 },
+				{ "name": "放鬆拉伸", "seconds": 180 }
+			]
+		},
+		{
+			"name": "體適能團課 30 分鐘",
+			"steps": [
+				{ "name": "集合點名與說明", "seconds": 120 },
+				{ "name": "暖身帶動跳", "seconds": 300 },
+				{ "name": "有氧步伐組合", "seconds": 360 },
+				{ "name": "器材循環站 1", "seconds": 240 },
+				{ "name": "轉換休息", "seconds": 60 },
+				{ "name": "器材循環站 2", "seconds": 240 },
+				{ "name": "轉換休息", "seconds": 60 },
+				{ "name": "燃脂地板操", "seconds": 300 },
+				{ "name": "緩和伸展", "seconds": 300 }
+			]
+		}
+	]
+}
+

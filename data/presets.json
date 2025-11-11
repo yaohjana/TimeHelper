@@ -1,0 +1,207 @@
+{
+	"presets": [
+
+		{
+			"name": "咖啡手沖（4 分）",
+			"steps": [
+				{ "name": "悶蒸", "seconds": 30 },
+				{ "name": "注水一", "seconds": 60 },
+				{ "name": "注水二", "seconds": 60 },
+				{ "name": "注水三", "seconds": 60 },
+				{ "name": "悶萃完成", "seconds": 30 }
+			]
+		},
+		{
+			"name": "養身操（暖身 5 分）",
+			"steps": [
+				{ "name": "頸肩放鬆", "seconds": 60 },
+				{ "name": "手臂環繞", "seconds": 60 },
+				{ "name": "腰部扭轉", "seconds": 60 },
+				{ "name": "髖關節活動", "seconds": 60 },
+				{ "name": "膝踝活動", "seconds": 60 }
+			]
+		},
+		{
+			"name": "單槓（5 組：做+休）",
+			"steps": [
+				{ "name": "做第 1 組", "seconds": 30 },
+				{ "name": "休息", "seconds": 60 },
+				{ "name": "做第 2 組", "seconds": 30 },
+				{ "name": "休息", "seconds": 60 },
+				{ "name": "做第 3 組", "seconds": 30 },
+				{ "name": "休息", "seconds": 60 },
+				{ "name": "做第 4 組", "seconds": 30 },
+				{ "name": "休息", "seconds": 60 },
+				{ "name": "做第 5 組", "seconds": 30 }
+			]
+		},
+		{
+			"name": "跳繩（間歇 8 組）",
+			"steps": [
+				{ "name": "跳繩", "seconds": 45 },
+				{ "name": "休息", "seconds": 30 },
+				{ "name": "跳繩", "seconds": 45 },
+				{ "name": "休息", "seconds": 30 },
+				{ "name": "跳繩", "seconds": 45 },
+				{ "name": "休息", "seconds": 30 },
+				{ "name": "跳繩", "seconds": 45 },
+				{ "name": "休息", "seconds": 30 }
+			]
+		},
+		{
+			"name": "10 分鐘整理工作環境",
+			"steps": [
+				{ "name": "分類桌面物品", "seconds": 240 },
+				{ "name": "擦拭桌面與設備", "seconds": 180 },
+				{ "name": "收納與歸位", "seconds": 180 }
+			]
+		},
+		{
+			"name": "20 分鐘番茄鐘",
+			"steps": [
+				{ "name": "專注工作", "seconds": 1200 }
+			]
+		},
+		{
+			"name": "20 分鐘專注閱讀",
+			"steps": [
+				{ "name": "設定閱讀環境", "seconds": 60 },
+				{ "name": "專注閱讀", "seconds": 1020 },
+				{ "name": "摘要與筆記", "seconds": 120 }
+			]
+		},
+		{
+			"name": "5 分鐘深呼吸放鬆",
+			"steps": [
+				{ "name": "調整坐姿與呼吸", "seconds": 60 },
+				{ "name": "節奏呼吸：吸 4 秒、吐 6 秒", "seconds": 180 },
+				{ "name": "緩慢伸展與收心", "seconds": 60 }
+			]
+		},
+		{
+			"name": "15 分鐘晨間啟動",
+			"steps": [
+				{ "name": "開窗通風＋喝水", "seconds": 180 },
+				{ "name": "喚醒式伸展", "seconds": 360 },
+				{ "name": "快速列出今日三件事", "seconds": 360 }
+			]
+		},
+		{
+			"name": "30 分鐘家務巡迴",
+			"steps": [
+				{ "name": "整理起居空間", "seconds": 600 },
+				{ "name": "廚房與餐桌清潔", "seconds": 600 },
+				{ "name": "浴室與地面巡檢", "seconds": 600 }
+			]
+		},
+		{
+			"name": "45 分鐘專案衝刺",
+			"steps": [
+				{ "name": "確認目標與分工", "seconds": 300 },
+				{ "name": "集中執行", "seconds": 2100 },
+				{ "name": "成果整理與筆記", "seconds": 180 },
+				{ "name": "短暫伸展休息", "seconds": 120 }
+			]
+		},
+		{
+			"name": "60 分鐘學習時段",
+			"steps": [
+				{ "name": "複習與暖身閱讀", "seconds": 600 },
+				{ "name": "深入學習／實作", "seconds": 2400 },
+				{ "name": "整理重點與反思", "seconds": 600 }
+			]
+		}
+	],
+	"teaMasterPresets": [
+		{
+			"name": "茶藝師：日常綠茶",
+			"steps": [
+				{ "name": "溫杯暖壺", "seconds": 45 },
+				{ "name": "置茶醒茶", "seconds": 30 },
+				{ "name": "第一泡浸潤", "seconds": 60 },
+				{ "name": "倒出分杯", "seconds": 30 },
+				{ "name": "第二泡浸泡", "seconds": 45 },
+				{ "name": "分杯品飲", "seconds": 45 }
+			]
+		},
+		{
+			"name": "茶藝師：台灣高山烏龍",
+			"steps": [
+				{ "name": "溫杯暖壺", "seconds": 60 },
+				{ "name": "置茶搖香", "seconds": 45 },
+				{ "name": "第一泡快速淋洗", "seconds": 25 },
+				{ "name": "第二泡浸泡", "seconds": 50 },
+				{ "name": "聞香品茗", "seconds": 60 },
+				{ "name": "第三泡回沖", "seconds": 55 },
+				{ "name": "分享茶湯", "seconds": 60 }
+			]
+		},
+		{
+			"name": "茶藝師：紅茶（阿薩姆/紅玉）",
+			"steps": [
+				{ "name": "溫壺與茶海", "seconds": 40 },
+				{ "name": "置茶悶香", "seconds": 35 },
+				{ "name": "第一泡浸潤", "seconds": 75 },
+				{ "name": "分杯品飲", "seconds": 45 },
+				{ "name": "第二泡浸泡", "seconds": 90 },
+				{ "name": "第三泡加蓋萃取", "seconds": 110 }
+			]
+		},
+		{
+			"name": "茶藝師：普洱熟茶",
+			"steps": [
+				{ "name": "溫杯驅味", "seconds": 50 },
+				{ "name": "置茶喚醒", "seconds": 40 },
+				{ "name": "洗茶（棄湯）", "seconds": 20 },
+				{ "name": "第一泡浸泡", "seconds": 45 },
+				{ "name": "第二泡浸泡", "seconds": 60 },
+				{ "name": "第三泡浸泡", "seconds": 75 },
+				{ "name": "第四泡慢萃", "seconds": 90 }
+			]
+		},
+		{
+			"name": "茶藝師：茉莉花茶",
+			"steps": [
+				{ "name": "溫杯暖壺", "seconds": 45 },
+				{ "name": "置茶舒展", "seconds": 30 },
+				{ "name": "第一泡浸泡", "seconds": 50 },
+				{ "name": "倒出分杯", "seconds": 35 },
+				{ "name": "第二泡浸泡", "seconds": 55 },
+				{ "name": "第三泡浸泡", "seconds": 65 }
+			]
+		},
+		{
+			"name": "茶藝師：玫瑰花茶",
+			"steps": [
+				{ "name": "溫杯暖壺", "seconds": 40 },
+				{ "name": "置花醒香", "seconds": 35 },
+				{ "name": "蜂蜜/果乾預溶", "seconds": 45 },
+				{ "name": "浸泡釋香", "seconds": 90 },
+				{ "name": "分杯品飲", "seconds": 45 },
+				{ "name": "第二泡回沖", "seconds": 110 }
+			]
+		},
+		{
+			"name": "茶藝師：洛神果茶（冰鎮）",
+			"steps": [
+				{ "name": "沖洗茶具", "seconds": 30 },
+				{ "name": "溫水醒洛神", "seconds": 45 },
+				{ "name": "熱泡釋色", "seconds": 120 },
+				{ "name": "加冰鎮涼", "seconds": 90 },
+				{ "name": "加蜜/果汁調味", "seconds": 60 },
+				{ "name": "裝瓶或分杯", "seconds": 60 }
+			]
+		},
+		{
+			"name": "茶藝師：袋泡茶快速沖泡",
+			"steps": [
+				{ "name": "準備熱水與茶包", "seconds": 30 },
+				{ "name": "預熱杯具", "seconds": 45 },
+				{ "name": "浸泡沖泡", "seconds": 120 },
+				{ "name": "輕壓取出茶包", "seconds": 30 },
+				{ "name": "調味與攪拌", "seconds": 45 }
+			]
+		}
+	]
+}
+

@@ -1,0 +1,90 @@
+{
+	"theme": "茶藝師多品項茶飲時間管理",
+	"presets": [
+		{
+			"name": "煎茶（三煎）",
+			"steps": [
+				{ "name": "溫杯暖壺", "seconds": 40 },
+				{ "name": "置茶舒展", "seconds": 30 },
+				{ "name": "第一煎（70℃）", "seconds": 60 },
+				{ "name": "分杯共享", "seconds": 40 },
+				{ "name": "第二煎（75℃）", "seconds": 45 },
+				{ "name": "第三煎（80℃）", "seconds": 50 }
+			]
+		},
+		{
+			"name": "鐵觀音（功夫茶）",
+			"steps": [
+				{ "name": "醒壺溫杯", "seconds": 50 },
+				{ "name": "置茶搖香", "seconds": 40 },
+				{ "name": "洗茶（棄湯）", "seconds": 18 },
+				{ "name": "第一泡高沖快倒", "seconds": 40 },
+				{ "name": "第二泡中沖", "seconds": 45 },
+				{ "name": "第三泡低沖慢萃", "seconds": 60 },
+				{ "name": "聞香杯品茗", "seconds": 60 }
+			]
+		},
+        {
+			"name": "東方美人茶",
+			"steps": [
+				{ "name": "溫杯暖壺", "seconds": 45 },
+				{ "name": "置茶喚醒", "seconds": 35 },
+				{ "name": "第一泡浸泡", "seconds": 55 },
+				{ "name": "第二泡浸泡", "seconds": 70 },
+				{ "name": "第三泡慢萃", "seconds": 90 }
+			]
+		},
+		{
+			"name": "白毫烏龍（冷泡）",
+			"steps": [
+				{ "name": "清洗茶具", "seconds": 20 },
+				{ "name": "置茶加冰水", "seconds": 40 },
+				{ "name": "冷藏浸泡", "seconds": 14400 },
+				{ "name": "回溫醒香", "seconds": 300 },
+				{ "name": "裝瓶冰鎮", "seconds": 120 }
+			]
+		},
+		{
+			"name": "菊花普洱茶",
+			"steps": [
+				{ "name": "溫杯醒茶", "seconds": 50 },
+				{ "name": "普洱洗茶", "seconds": 20 },
+				{ "name": "投入菊花", "seconds": 30 },
+				{ "name": "第一泡浸泡", "seconds": 45 },
+				{ "name": "第二泡浸泡", "seconds": 60 },
+				{ "name": "第三泡浸泡", "seconds": 75 }
+			]
+		},
+		{
+			"name": "玫瑰烏梅花果茶",
+			"steps": [
+				{ "name": "沖洗花果乾", "seconds": 30 },
+				{ "name": "蜜水預浸", "seconds": 120 },
+				{ "name": "熱水沖泡", "seconds": 180 },
+				{ "name": "調和蜂蜜", "seconds": 60 },
+				{ "name": "裝瓶加冰", "seconds": 90 }
+			]
+		},
+		{
+			"name": "袋泡茶批次沖煮",
+			"steps": [
+				{ "name": "準備多壺熱水", "seconds": 30 },
+				{ "name": "投入茶包浸泡", "seconds": 150 },
+				{ "name": "適度搖晃萃取", "seconds": 45 },
+				{ "name": "取出茶包", "seconds": 30 },
+				{ "name": "分裝與加料", "seconds": 90 }
+			]
+		},
+		{
+			"name": "奶蓋綠茶工作站",
+			"steps": [
+				{ "name": "煮糖漿/奶蓋準備", "seconds": 300 },
+				{ "name": "綠茶熱泡", "seconds": 120 },
+				{ "name": "冰鎮降溫", "seconds": 120 },
+				{ "name": "打發奶蓋", "seconds": 90 },
+				{ "name": "組裝與出杯", "seconds": 90 }
+			]
+		}
+	]
+}
+

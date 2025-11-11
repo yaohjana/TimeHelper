@@ -1,0 +1,50 @@
+{
+	"theme": "致富冥想活動",
+	"presets": [
+		{
+			"name": "晨間富足肯定冥想",
+			"steps": [
+				{ "name": "調息入靜", "seconds": 180 },
+				{ "name": "身體掃描放鬆", "seconds": 180 },
+				{ "name": "富足肯定語默念", "seconds": 240 },
+				{ "name": "視覺化成功場景", "seconds": 300 },
+				{ "name": "設定今日行動", "seconds": 180 },
+				{ "name": "感恩收束", "seconds": 120 }
+			]
+		},
+		{
+			"name": "財務願景工作坊",
+			"steps": [
+				{ "name": "呼吸導引", "seconds": 180 },
+				{ "name": "願景書寫", "seconds": 300 },
+				{ "name": "富足冥想", "seconds": 360 },
+				{ "name": "未來自我對話", "seconds": 240 },
+				{ "name": "行動計畫列點", "seconds": 300 },
+				{ "name": "分享與回饋", "seconds": 300 }
+			]
+		},
+		{
+			"name": "晚間感恩富足儀式",
+			"steps": [
+				{ "name": "靜坐放鬆", "seconds": 180 },
+				{ "name": "回顧今日豐盛", "seconds": 240 },
+				{ "name": "肯定語音引導", "seconds": 240 },
+				{ "name": "富足視覺化", "seconds": 300 },
+				{ "name": "放下焦慮釋放", "seconds": 180 },
+				{ "name": "安睡引導", "seconds": 240 }
+			]
+		},
+		{
+			"name": "財務自由心智重塑",
+			"steps": [
+				{ "name": "調整呼吸與姿勢", "seconds": 180 },
+				{ "name": "辨識限制信念", "seconds": 240 },
+				{ "name": "轉換正向信念", "seconds": 300 },
+				{ "name": "觀想成功故事", "seconds": 300 },
+				{ "name": "行動策略冥想", "seconds": 240 },
+				{ "name": "結束感恩", "seconds": 120 }
+			]
+		}
+	]
+}
+

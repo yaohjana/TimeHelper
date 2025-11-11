@@ -1,0 +1,52 @@
+{
+	"theme": "降血壓調理",
+	"presets": [
+		{
+			"name": "晨間降壓調息 15 分鐘",
+			"steps": [
+				{ "name": "坐姿腹式呼吸", "seconds": 180 },
+				{ "name": "頸部伸展", "seconds": 120 },
+				{ "name": "按揉太溪穴", "seconds": 120 },
+				{ "name": "按揉曲池穴", "seconds": 120 },
+				{ "name": "側彎伸展", "seconds": 120 },
+				{ "name": "站立深呼吸", "seconds": 180 },
+				{ "name": "靜躺放鬆", "seconds": 300 }
+			]
+		},
+		{
+			"name": "晚間放鬆降壓",
+			"steps": [
+				{ "name": "溫水足浴", "seconds": 180 },
+				{ "name": "按揉湧泉穴", "seconds": 120 },
+				{ "name": "按揉三陰交穴", "seconds": 150 },
+				{ "name": "肩頸鬆弛", "seconds": 120 },
+				{ "name": "腹式呼吸", "seconds": 180 },
+				{ "name": "臥姿靜心", "seconds": 300 }
+			]
+		},
+		{
+			"name": "動靜結合降壓課程",
+			"steps": [
+				{ "name": "熱身與鬆筋", "seconds": 240 },
+				{ "name": "緩慢深蹲", "seconds": 120 },
+				{ "name": "大腿前後伸展", "seconds": 120 },
+				{ "name": "按揉內關穴", "seconds": 120 },
+				{ "name": "按揉足三里", "seconds": 120 },
+				{ "name": "太極式呼吸調整", "seconds": 240 },
+				{ "name": "坐姿冥想", "seconds": 240 }
+			]
+		},
+		{
+			"name": "壓力上升緊急舒緩",
+			"steps": [
+				{ "name": "集中呼吸四拍", "seconds": 120 },
+				{ "name": "頭頂百會輕點", "seconds": 60 },
+				{ "name": "合谷穴按壓", "seconds": 120 },
+				{ "name": "內關穴按壓", "seconds": 120 },
+				{ "name": "肩頸放鬆拉伸", "seconds": 120 },
+				{ "name": "靜坐冥想", "seconds": 180 }
+			]
+		}
+	]
+}
+

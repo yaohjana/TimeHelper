@@ -1,0 +1,66 @@
+{
+	"theme": "養身健康操",
+	"presets": [
+		{
+			"name": "八段錦標準流程",
+			"steps": [
+				{ "name": "預備站樁調息", "seconds": 120 },
+				{ "name": "雙手托天理三焦", "seconds": 90 },
+				{ "name": "左右開弓似射雕", "seconds": 90 },
+				{ "name": "調理脾胃須單舉", "seconds": 90 },
+				{ "name": "五勞七傷往後瞧", "seconds": 90 },
+				{ "name": "搖頭擺尾去心火", "seconds": 90 },
+				{ "name": "兩手攀足固腎腰", "seconds": 90 },
+				{ "name": "攢拳怒目增氣力", "seconds": 90 },
+				{ "name": "背後七顛百病消", "seconds": 90 },
+				{ "name": "收勢調息", "seconds": 120 }
+			]
+		},
+		{
+			"name": "五行健康操",
+			"steps": [
+				{ "name": "金：開合手臂擴胸", "seconds": 120 },
+				{ "name": "木：側伸展舒筋", "seconds": 120 },
+				{ "name": "水：腹式呼吸按摩", "seconds": 120 },
+				{ "name": "火：扭腰拍打活絡", "seconds": 120 },
+				{ "name": "土：馬步穩固下盤", "seconds": 120 },
+				{ "name": "收式靜站", "seconds": 90 }
+			]
+		},
+		{
+			"name": "樂齡關節活動操",
+			"steps": [
+				{ "name": "頸肩放鬆轉動", "seconds": 120 },
+				{ "name": "手腕手指活動", "seconds": 120 },
+				{ "name": "胸廓開展", "seconds": 120 },
+				{ "name": "坐姿抬腿", "seconds": 120 },
+				{ "name": "足踝繞圈", "seconds": 120 },
+				{ "name": "呼吸舒緩", "seconds": 120 }
+			]
+		},
+		{
+			"name": "晨間調氣 20 分鐘",
+			"steps": [
+				{ "name": "靜觀呼吸", "seconds": 180 },
+				{ "name": "拍打頭面醒腦", "seconds": 120 },
+				{ "name": "肩背拍擊", "seconds": 120 },
+				{ "name": "腹腔順時按摩", "seconds": 120 },
+				{ "name": "腿部揉搓", "seconds": 120 },
+				{ "name": "緩步吐納", "seconds": 240 },
+				{ "name": "站立冥想收勢", "seconds": 180 }
+			]
+		},
+		{
+			"name": "睡前舒緩 15 分鐘",
+			"steps": [
+				{ "name": "坐姿深呼吸", "seconds": 120 },
+				{ "name": "頸肩放鬆伸展", "seconds": 120 },
+				{ "name": "貓牛脊椎活動", "seconds": 120 },
+				{ "name": "臀部膝蓋放鬆", "seconds": 120 },
+				{ "name": "脚底按摩拍打", "seconds": 120 },
+				{ "name": "臥姿腹式呼吸", "seconds": 180 }
+			]
+		}
+	]
+}
+

@@ -1,0 +1,59 @@
+{
+	"theme": "國中課程活動時間管理",
+	"presets": [
+		{
+			"name": "晨間班會與課前準備（20 分）",
+			"steps": [
+				{ "name": "進班整隊與點名", "seconds": 300 },
+				{ "name": "公告事項", "seconds": 240 },
+				{ "name": "班級公約提醒", "seconds": 180 },
+				{ "name": "晨讀暖身", "seconds": 420 },
+				{ "name": "課前整理與預告", "seconds": 300 }
+			]
+		},
+		{
+			"name": "國文課程節奏（45 分）",
+			"steps": [
+				{ "name": "課前複習提問", "seconds": 300 },
+				{ "name": "新課導入", "seconds": 420 },
+				{ "name": "課文朗讀與節奏訓練", "seconds": 600 },
+				{ "name": "段落討論與筆記", "seconds": 720 },
+				{ "name": "習作練習", "seconds": 420 },
+				{ "name": "課堂回饋與收斂", "seconds": 420 }
+			]
+		},
+		{
+			"name": "數學探究合作課（45 分）",
+			"steps": [
+				{ "name": "暖身題與檢討", "seconds": 420 },
+				{ "name": "概念講解", "seconds": 540 },
+				{ "name": "分組任務說明", "seconds": 240 },
+				{ "name": "分組探究與討論", "seconds": 900 },
+				{ "name": "成果分享", "seconds": 480 },
+				{ "name": "重點整理與預告作業", "seconds": 300 }
+			]
+		},
+		{
+			"name": "午間自主管理（40 分）",
+			"steps": [
+				{ "name": "午餐排隊與領餐", "seconds": 420 },
+				{ "name": "用餐與交流", "seconds": 900 },
+				{ "name": "清理環境", "seconds": 300 },
+				{ "name": "午休放鬆", "seconds": 720 },
+				{ "name": "午後課程準備", "seconds": 240 }
+			]
+		},
+		{
+			"name": "校隊社團訓練（60 分）",
+			"steps": [
+				{ "name": "集合與熱身", "seconds": 600 },
+				{ "name": "基本功訓練", "seconds": 900 },
+				{ "name": "戰術演練", "seconds": 900 },
+				{ "name": "分組對抗", "seconds": 840 },
+				{ "name": "整理收操", "seconds": 360 },
+				{ "name": "回饋檢討與布置作業", "seconds": 360 }
+			]
+		}
+	]
+}
+

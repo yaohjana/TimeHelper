@@ -1,0 +1,94 @@
+{
+	"theme": "手沖咖啡風味沖煮",
+	"presets": [
+		{
+			"name": "淺焙衣索比亞 日曬花香",
+			"steps": [
+				{ "name": "悶蒸前置（30g注水）", "seconds": 45 },
+				{ "name": "第一段繞圈（120g）", "seconds": 40 },
+				{ "name": "第二段拉高（90g）", "seconds": 35 },
+				{ "name": "第三段收尾（70g）", "seconds": 30 },
+				{ "name": "滴濾完成", "seconds": 60 },
+				{ "name": "搖勻杯液", "seconds": 15 }
+			]
+		},
+		{
+			"name": "中焙瓜地馬拉 洗處平衡",
+			"steps": [
+				{ "name": "預熱濾杯與伺服壺", "seconds": 30 },
+				{ "name": "悶蒸（40ml）", "seconds": 35 },
+				{ "name": "第一段注水至120ml", "seconds": 35 },
+				{ "name": "第二段注水至220ml", "seconds": 35 },
+				{ "name": "第三段注水至320ml", "seconds": 35 },
+				{ "name": "滴濾與整杯", "seconds": 70 }
+			]
+		},
+		{
+			"name": "重焙蘇門答臘 曼特寧厚感",
+			"steps": [
+				{ "name": "溫杯與濾紙沖洗", "seconds": 30 },
+				{ "name": "悶蒸加蓋（40ml）", "seconds": 45 },
+				{ "name": "慢速第一段（100ml）", "seconds": 50 },
+				{ "name": "第二段維持低衝（90ml）", "seconds": 45 },
+				{ "name": "第三段集中中間（70ml）", "seconds": 45 },
+				{ "name": "悶杯萃取", "seconds": 40 }
+			]
+		},
+		{
+			"name": "日曬肯亞 冰萃手沖",
+			"steps": [
+				{ "name": "冰塊置入分享壺", "seconds": 20 },
+				{ "name": "悶蒸（35ml）", "seconds": 40 },
+				{ "name": "細水繞圈（150ml）", "seconds": 70 },
+				{ "name": "提升水柱沖入（120ml）", "seconds": 50 },
+				{ "name": "通過冰塊快速降溫", "seconds": 45 },
+				{ "name": "搖勻與裝杯", "seconds": 30 }
+			]
+		},
+		{
+			"name": "厭氧處理 花果調性",
+			"steps": [
+				{ "name": "濾紙沖洗與粉床整平", "seconds": 25 },
+				{ "name": "悶蒸（45ml）", "seconds": 50 },
+				{ "name": "第一段前段（110ml）", "seconds": 40 },
+				{ "name": "第二段拉長（110ml）", "seconds": 45 },
+				{ "name": "第三段斷水點綴（80ml）", "seconds": 45 },
+				{ "name": "最後滴濾", "seconds": 60 }
+			]
+		},
+		{
+			"name": "蜜處理甜感強化",
+			"steps": [
+				{ "name": "預潤濾杯與粉床", "seconds": 25 },
+				{ "name": "悶蒸（40ml）", "seconds": 40 },
+				{ "name": "第一段專注中心（100ml）", "seconds": 35 },
+				{ "name": "第二段外圈擴散（100ml）", "seconds": 35 },
+				{ "name": "第三段回到中心（80ml）", "seconds": 35 },
+				{ "name": "滯留控制與收尾", "seconds": 60 }
+			]
+		},
+		{
+			"name": "手沖咖啡教學示範（分段解說）",
+			"steps": [
+				{ "name": "風味介紹與器材說明", "seconds": 120 },
+				{ "name": "研磨度與粉水比解析", "seconds": 150 },
+				{ "name": "悶蒸示範與重點", "seconds": 90 },
+				{ "name": "三段注水技巧講解", "seconds": 180 },
+				{ "name": "萃取判讀與調整", "seconds": 150 },
+				{ "name": "風味杯測與問答", "seconds": 180 }
+			]
+		},
+		{
+			"name": "高效率吧檯批次沖煮",
+			"steps": [
+				{ "name": "前置溫杯與濾紙", "seconds": 60 },
+				{ "name": "同步悶蒸多杯", "seconds": 45 },
+				{ "name": "交錯第一段注水", "seconds": 60 },
+				{ "name": "交錯第二段注水", "seconds": 60 },
+				{ "name": "終段收尾控制", "seconds": 60 },
+				{ "name": "分裝出杯", "seconds": 90 }
+			]
+		}
+	]
+}
+

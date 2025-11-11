@@ -1,0 +1,58 @@
+{
+	"theme": "眼睛穴道按摩",
+	"presets": [
+		{
+			"name": "護眼舒壓 10 分鐘",
+			"steps": [
+				{ "name": "深呼吸調息", "seconds": 60 },
+				{ "name": "熱掌覆眼", "seconds": 90 },
+				{ "name": "按揉睛明穴", "seconds": 60 },
+				{ "name": "按揉攢竹穴", "seconds": 60 },
+				{ "name": "按揉魚腰穴", "seconds": 60 },
+				{ "name": "按揉絲竹空穴", "seconds": 60 },
+				{ "name": "按揉太陽穴", "seconds": 90 },
+				{ "name": "按揉承泣穴", "seconds": 60 },
+				{ "name": "頸後放鬆", "seconds": 90 },
+				{ "name": "閉目休息", "seconds": 90 }
+			]
+		},
+		{
+			"name": "上班族護眼午後例行",
+			"steps": [
+				{ "name": "肩頸伸展", "seconds": 120 },
+				{ "name": "眉頭按壓", "seconds": 60 },
+				{ "name": "眼眶外側按壓", "seconds": 60 },
+				{ "name": "眼球轉動（順/逆時針）", "seconds": 120 },
+				{ "name": "遠近交替凝視", "seconds": 120 },
+				{ "name": "摩擦手掌覆眼", "seconds": 90 },
+				{ "name": "深呼吸結束", "seconds": 60 }
+			]
+		},
+		{
+			"name": "學生讀書護眼流程",
+			"steps": [
+				{ "name": "坐姿調整與放鬆", "seconds": 90 },
+				{ "name": "上眼眶按壓（攢竹至魚腰）", "seconds": 90 },
+				{ "name": "下眼眶按壓（承泣至四白）", "seconds": 90 },
+				{ "name": "按壓迎香穴疏通", "seconds": 60 },
+				{ "name": "按壓風池穴放鬆", "seconds": 90 },
+				{ "name": "眼睛遠眺 3 組", "seconds": 180 },
+				{ "name": "熱敷眼罩", "seconds": 180 }
+			]
+		},
+		{
+			"name": "乾眼舒緩 12 分鐘",
+			"steps": [
+				{ "name": "眨眼快速 30 次", "seconds": 60 },
+				{ "name": "熱毛巾敷眼", "seconds": 180 },
+				{ "name": "眼輪匝肌外圈按摩", "seconds": 120 },
+				{ "name": "按揉睛明穴", "seconds": 90 },
+				{ "name": "按揉球後穴（輕壓）", "seconds": 90 },
+				{ "name": "按壓風池穴", "seconds": 90 },
+				{ "name": "肩頸伸展", "seconds": 120 },
+				{ "name": "閉目休息與呼吸", "seconds": 120 }
+			]
+		}
+	]
+}
+

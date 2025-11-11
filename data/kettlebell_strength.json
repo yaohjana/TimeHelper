@@ -1,0 +1,78 @@
+{
+	"theme": "壺鈴重量訓練",
+	"presets": [
+		{
+			"name": "壺鈴入門循環",
+			"steps": [
+				{ "name": "關節暖身", "seconds": 180 },
+				{ "name": "壺鈴硬舉", "seconds": 60 },
+				{ "name": "休息", "seconds": 30 },
+				{ "name": "壺鈴前推蹲", "seconds": 60 },
+				{ "name": "休息", "seconds": 30 },
+				{ "name": "壺鈴提拉", "seconds": 60 },
+				{ "name": "休息", "seconds": 30 },
+				{ "name": "壺鈴仰臥起坐", "seconds": 60 },
+				{ "name": "休息", "seconds": 60 },
+				{ "name": "伸展收操", "seconds": 180 }
+			]
+		},
+		{
+			"name": "雙壺鈴力量訓練",
+			"steps": [
+				{ "name": "動態暖身", "seconds": 180 },
+				{ "name": "雙壺鈴清至架位", "seconds": 75 },
+				{ "name": "休息", "seconds": 45 },
+				{ "name": "雙壺鈴前蹲", "seconds": 75 },
+				{ "name": "休息", "seconds": 45 },
+				{ "name": "雙壺鈴推舉", "seconds": 75 },
+				{ "name": "休息", "seconds": 45 },
+				{ "name": "雙壺鈴划船", "seconds": 75 },
+				{ "name": "休息", "seconds": 60 },
+				{ "name": "核心三頭肌伸展", "seconds": 180 }
+			]
+		},
+		{
+			"name": "壺鈴體能挑戰 20 分鐘",
+			"steps": [
+				{ "name": "暖身與肌筋膜放鬆", "seconds": 240 },
+				{ "name": "壺鈴擺盪", "seconds": 60 },
+				{ "name": "休息", "seconds": 30 },
+				{ "name": "壺鈴抓舉（左）", "seconds": 60 },
+				{ "name": "壺鈴抓舉（右）", "seconds": 60 },
+				{ "name": "休息", "seconds": 30 },
+				{ "name": "壺鈴弓步上推", "seconds": 60 },
+				{ "name": "休息", "seconds": 30 },
+				{ "name": "壺鈴俯身划船", "seconds": 60 },
+				{ "name": "休息", "seconds": 60 },
+				{ "name": "核心與髖伸展", "seconds": 240 }
+			]
+		},
+		{
+			"name": "壺鈴競技 10 分鐘 Test",
+			"steps": [
+				{ "name": "熱身全集", "seconds": 180 },
+				{ "name": "壺鈴擺盪 1 分鐘", "seconds": 60 },
+				{ "name": "壺鈴清推 1 分鐘", "seconds": 60 },
+				{ "name": "壺鈴深蹲 1 分鐘", "seconds": 60 },
+				{ "name": "壺鈴抓舉 1 分鐘", "seconds": 60 },
+				{ "name": "壺鈴挺舉 1 分鐘", "seconds": 60 },
+				{ "name": "壺鈴硬拉高拉 1 分鐘", "seconds": 60 },
+				{ "name": "休息與紀錄", "seconds": 120 }
+			]
+		},
+		{
+			"name": "壺鈴流動 Flow",
+			"steps": [
+				{ "name": "呼吸意識與暖身", "seconds": 180 },
+				{ "name": "壺鈴擺盪接清", "seconds": 60 },
+				{ "name": "壺鈴清接前蹲", "seconds": 60 },
+				{ "name": "壺鈴前蹲接推舉", "seconds": 60 },
+				{ "name": "壺鈴推舉接風車式", "seconds": 60 },
+				{ "name": "休息調整", "seconds": 60 },
+				{ "name": "左右交換重複 Flow", "seconds": 240 },
+				{ "name": "放鬆伸展", "seconds": 180 }
+			]
+		}
+	]
+}
+

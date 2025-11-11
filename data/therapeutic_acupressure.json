@@ -1,0 +1,150 @@
+{
+    "theme": "病症穴道調理",
+    "presets": [
+        {
+            "name": "肩頸痠痛舒緩",
+            "steps": [
+                {
+                    "name": "熱敷肩頸",
+                    "seconds": 180
+                },
+                {
+                    "name": "按揉肩井穴",
+                    "seconds": 120
+                },
+                {
+                    "name": "按揉風池穴",
+                    "seconds": 120
+                },
+                {
+                    "name": "按揉肩外俞與肩中俞",
+                    "seconds": 120
+                },
+                {
+                    "name": "頸部緩轉",
+                    "seconds": 120
+                },
+                {
+                    "name": "伸展與呼吸調整",
+                    "seconds": 180
+                }
+            ]
+        },
+        {
+            "name": "腸胃不適調理",
+            "steps": [
+                {
+                    "name": "腹式呼吸暖腹",
+                    "seconds": 120
+                },
+                {
+                    "name": "按揉中脘穴",
+                    "seconds": 120
+                },
+                {
+                    "name": "按揉天樞穴（左右）",
+                    "seconds": 150
+                },
+                {
+                    "name": "按揉足三里",
+                    "seconds": 150
+                },
+                {
+                    "name": "腹部順時按摩",
+                    "seconds": 120
+                },
+                {
+                    "name": "溫和伸展與放鬆",
+                    "seconds": 180
+                }
+            ]
+        },
+        {
+            "name": "偏頭痛緩解流程",
+            "steps": [
+                {
+                    "name": "調息並閉目靜坐",
+                    "seconds": 120
+                },
+                {
+                    "name": "按壓太陽穴",
+                    "seconds": 120
+                },
+                {
+                    "name": "按壓合谷穴",
+                    "seconds": 120
+                },
+                {
+                    "name": "按壓風池穴",
+                    "seconds": 120
+                },
+                {
+                    "name": "按壓內關穴",
+                    "seconds": 120
+                },
+                {
+                    "name": "頸背伸展",
+                    "seconds": 180
+                }
+            ]
+        },
+        {
+            "name": "經期腹痛舒緩",
+            "steps": [
+                {
+                    "name": "熱敷腹部",
+                    "seconds": 180
+                },
+                {
+                    "name": "按揉關元穴",
+                    "seconds": 120
+                },
+                {
+                    "name": "按揉氣海穴",
+                    "seconds": 120
+                },
+                {
+                    "name": "按揉三陰交穴",
+                    "seconds": 150
+                },
+                {
+                    "name": "按揉足三里",
+                    "seconds": 150
+                },
+                {
+                    "name": "平躺深呼吸",
+                    "seconds": 180
+                }
+            ]
+        },
+        {
+            "name": "焦慮緊張舒緩",
+            "steps": [
+                {
+                    "name": "坐姿調息",
+                    "seconds": 120
+                },
+                {
+                    "name": "按壓神門穴",
+                    "seconds": 120
+                },
+                {
+                    "name": "按壓內關穴",
+                    "seconds": 120
+                },
+                {
+                    "name": "按壓印堂穴",
+                    "seconds": 120
+                },
+                {
+                    "name": "肩頸放鬆動作",
+                    "seconds": 120
+                },
+                {
+                    "name": "全身鬆弛引導",
+                    "seconds": 180
+                }
+            ]
+        }
+    ]
+}

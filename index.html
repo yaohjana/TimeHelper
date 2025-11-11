@@ -1,0 +1,374 @@
+<!--TimeHelper/index.html 時間步調管理系統，可以設計各種計時器，例如泡綠茶、沖咖啡、養身操、超慢跑、單槓運動、跳繩、泡各種茶-->
+<html>
+
+<head>
+	<title>Time Helper</title>
+</head>
+
+<body>
+	<div id="appRoot" class="app-root">
+		<header class="app-header">
+			<div class="left">
+				<h1 class="brand">Time Helper</h1>
+				<div class="badge">Developed by DennisZ</div>
+			</div>
+			<div class="right controls-row">
+				<label for="themeSelect">主題</label>
+				<select id="themeSelect"></select>
+				<label for="presetSelect">預設</label>
+				<select id="presetSelect"></select>
+				<button id="editPresetBtn" class="secondary">編輯/自訂</button>
+				<label class="toggle">
+					<input id="beepToggle" type="checkbox" checked />
+					<span>提示音</span>
+				</label>
+				<label class="toggle">
+					<input id="tickToggle" type="checkbox" />
+					<span>秒音</span>
+				</label>
+				<label class="toggle">
+					<input id="voiceToggle" type="checkbox" checked />
+					<span>語音</span>
+				</label>
+			</div>
+		</header>
+
+		<main class="app-main">
+			<section class="timer-panel card">
+				<div class="now-title">目前步驟</div>
+				<div id="currentName" class="step-name">未選擇</div>
+				<div id="timeLeft" class="time-left">00:00</div>
+				<div class="buttons">
+					<button id="startBtn" class="primary">開始</button>
+					<button id="pauseBtn">暫停</button>
+					<button id="resetBtn" class="danger">重設</button>
+				</div>
+				<div class="loops-row">
+					<label>迴圈組數
+						<input id="loopsInput" type="number" min="1" max="999" value="1" />
+					</label>
+					<label class="toggle">
+						<input id="autoRepeatToggle" type="checkbox" />
+						<span>自動重複</span>
+					</label>
+				</div>
+			</section>
+
+			<section class="steps-panel card">
+				<div class="panel-title">步驟清單</div>
+				<ol id="stepsList" class="steps-list"></ol>
+			</section>
+		</main>
+	</div>
+
+	<!-- 自訂計時器編輯器 -->
+	<div id="editorBackdrop" class="backdrop" hidden>
+		<div class="editor-modal card">
+			<div class="editor-header">
+				<h2>自訂計時器</h2>
+				<button id="editorClose" class="icon">✕</button>
+			</div>
+			<div class="editor-body">
+				<div class="editor-row">
+					<label>名稱
+						<input id="customName" type="text" placeholder="例如：我的超慢跑 6 組" />
+					</label>
+				</div>
+				<div class="editor-steps">
+					<div class="editor-steps-head">
+						<span>步驟</span>
+						<button id="addStepBtn" class="secondary small">新增步驟</button>
+					</div>
+					<div id="editorSteps" class="editor-steps-list"></div>
+				</div>
+			</div>
+			<div class="editor-footer">
+				<button id="saveCustomBtn" class="primary">儲存為自訂預設</button>
+				<button id="deleteCustomBtn" class="danger secondary">刪除目前自訂</button>
+			</div>
+		</div>
+	</div>
+
+	<style>
+		/* 確保 hidden 一定隱藏（保險） */
+		[hidden] {
+			display: none !important;
+		}
+
+		:root {
+			--bg1: #0f172a;
+			--bg2: #1e293b;
+			--card: #0b1220aa;
+			--border: #2c3b55;
+			--text: #e6edf7;
+			--muted: #93a3b8;
+			--accent: #58a6ff;
+			--accent2: #22d3ee;
+			--danger: #ef4444;
+		}
+
+		* {
+			box-sizing: border-box;
+		}
+
+		html,
+		body {
+			height: 100%;
+		}
+
+		body {
+			margin: 0;
+			color: var(--text);
+			font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", "Noto Sans TC", Arial, "Helvetica Neue", Helvetica, "Apple Color Emoji", "Segoe UI Emoji";
+			background: radial-gradient(1200px 700px at 10% 10%, #1b2a4a 0%, transparent 60%),
+				radial-gradient(1200px 700px at 90% 20%, #11354a 0%, transparent 60%),
+				linear-gradient(160deg, var(--bg1), var(--bg2));
+		}
+
+		.app-root {
+			min-height: 100vh;
+			display: flex;
+			flex-direction: column;
+		}
+
+		.app-header {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 16px 24px;
+			border-bottom: 1px solid var(--border);
+			background: #0b1220aa;
+			backdrop-filter: blur(6px);
+			position: sticky;
+			top: 0;
+			z-index: 5;
+		}
+
+		.brand {
+			margin: 0;
+			font-size: 20px;
+			letter-spacing: .5px;
+		}
+
+		.controls-row {
+			display: flex;
+			gap: 10px;
+			align-items: center;
+			flex-wrap: wrap;
+		}
+
+		select,
+		input[type="text"],
+		input[type="number"] {
+			background: #0b1220;
+			border: 1px solid var(--border);
+			color: var(--text);
+			padding: 8px 10px;
+			border-radius: 8px;
+		}
+
+		label.toggle {
+			display: inline-flex;
+			gap: 6px;
+			align-items: center;
+			cursor: pointer;
+			color: var(--muted);
+		}
+
+		button {
+			cursor: pointer;
+			background: #16223a;
+			color: var(--text);
+			border: 1px solid var(--border);
+			padding: 10px 14px;
+			border-radius: 10px;
+		}
+
+		button.primary {
+			background: linear-gradient(180deg, #1d4ed8, #1e40af);
+			border-color: #2c4ccf;
+		}
+
+		button.secondary {
+			background: #0b1220;
+		}
+
+		button.danger {
+			background: linear-gradient(180deg, #b91c1c, #7f1d1d);
+			border-color: #b91c1c;
+		}
+
+		button.small {
+			padding: 6px 10px;
+			font-size: 12px;
+			border-radius: 8px;
+		}
+
+		button.icon {
+			padding: 6px 8px;
+		}
+
+		.app-main {
+			display: grid;
+			grid-template-columns: 1.1fr 1fr;
+			gap: 24px;
+			padding: 24px;
+		}
+
+		.card {
+			background: var(--card);
+			border: 1px solid var(--border);
+			border-radius: 16px;
+			padding: 18px;
+			box-shadow: 0 10px 40px rgba(0, 0, 0, .35);
+		}
+
+		.timer-panel .now-title {
+			color: var(--muted);
+			font-size: 13px;
+		}
+
+		.timer-panel .step-name {
+			font-size: 28px;
+			font-weight: 700;
+			margin: 6px 0 8px;
+			text-shadow: 0 2px 8px rgba(34, 211, 238, .2);
+		}
+
+		.timer-panel .time-left {
+			font-size: 80px;
+			line-height: 1;
+			letter-spacing: 1px;
+			text-shadow: 0 10px 40px rgba(88, 166, 255, .3);
+		}
+
+		.timer-panel .buttons {
+			margin-top: 16px;
+			display: flex;
+			gap: 10px;
+			flex-wrap: wrap;
+		}
+
+		.timer-panel .loops-row {
+			margin-top: 14px;
+			display: flex;
+			gap: 16px;
+			align-items: center;
+			color: var(--muted);
+		}
+
+		.timer-panel .loops-row input {
+			width: 80px;
+		}
+
+		.steps-panel .panel-title {
+			color: var(--muted);
+			margin-bottom: 8px;
+		}
+
+		.steps-list {
+			margin: 0;
+			padding-left: 24px;
+			max-height: calc(100vh - 260px);
+			overflow: auto;
+		}
+
+		.steps-list li {
+			margin: 6px 0;
+		}
+
+		.steps-list li.active {
+			font-weight: 700;
+			color: var(--accent);
+			text-shadow: 0 2px 10px rgba(88, 166, 255, .25);
+		}
+
+		/* 編輯器 */
+		.backdrop {
+			position: fixed;
+			inset: 0;
+			background: rgba(2, 6, 23, .65);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 20px;
+			z-index: 10;
+		}
+
+		.editor-modal {
+			width: min(960px, 96vw);
+			max-height: 92vh;
+			overflow: auto;
+		}
+
+		.editor-header {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			gap: 12px;
+		}
+
+		.editor-body {
+			margin-top: 10px;
+			display: flex;
+			flex-direction: column;
+			gap: 14px;
+		}
+
+		.editor-row {
+			display: flex;
+			gap: 10px;
+			align-items: center;
+		}
+
+		.editor-steps-head {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		.editor-steps-list {
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+		}
+
+		.editor-step {
+			display: grid;
+			grid-template-columns: 1fr 120px auto;
+			gap: 10px;
+			align-items: center;
+		}
+
+		.editor-step .tools {
+			display: flex;
+			gap: 6px;
+		}
+
+		@media (max-width: 960px) {
+			.app-main {
+				grid-template-columns: 1fr;
+			}
+
+			.steps-list {
+				max-height: none;
+			}
+
+			.timer-panel .time-left {
+				font-size: 64px;
+			}
+		}
+		.badge {
+			text-align: center;
+			font-size: 9px;
+			margin:5px 0px;
+			padding: 1px 1px; 
+			border: 1px solid #334155; 
+			border-radius: 999px; 
+			color: #334155;
+		}
+	</style>
+	<script src="./app.js"></script>
+</body>
+
+</html>
