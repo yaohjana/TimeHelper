@@ -345,6 +345,89 @@
 			gap: 6px;
 		}
 
+		body.mobile-layout .app-root {
+			min-height: 100vh;
+			padding-bottom: env(safe-area-inset-bottom, 0);
+			background: linear-gradient(180deg, rgba(15, 23, 42, .92), rgba(15, 23, 42, .88));
+		}
+
+		body.mobile-layout .app-header {
+			flex-direction: column;
+			align-items: stretch;
+			gap: 12px;
+			padding: 16px;
+		}
+
+		body.mobile-layout .app-header .left {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		body.mobile-layout .app-header .right {
+			display: grid;
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+			gap: 10px;
+		}
+
+		body.mobile-layout .controls-row label {
+			font-size: 12px;
+		}
+
+		body.mobile-layout select,
+		body.mobile-layout input[type="text"],
+		body.mobile-layout input[type="number"],
+		body.mobile-layout button {
+			width: 100%;
+		}
+
+		body.mobile-layout button.small {
+			width: auto;
+		}
+
+		body.mobile-layout .app-main {
+			display: flex;
+			flex-direction: column;
+			padding: 16px;
+			gap: 16px;
+		}
+
+		body.mobile-layout .timer-panel .time-left {
+			font-size: 56px;
+		}
+
+		body.mobile-layout .timer-panel .buttons {
+			flex-direction: column;
+			gap: 8px;
+		}
+
+		body.mobile-layout .loops-row {
+			flex-direction: column;
+			align-items: stretch;
+			gap: 8px;
+		}
+
+		body.mobile-layout .steps-list {
+			padding-left: 18px;
+			max-height: 40vh;
+		}
+
+		body.mobile-layout .backdrop {
+			align-items: stretch;
+			padding: 0;
+		}
+
+		body.mobile-layout .editor-modal {
+			border-radius: 0;
+			width: 100vw;
+			max-height: 100vh;
+			height: 100vh;
+		}
+
+		body.mobile-layout .editor-body {
+			padding-bottom: env(safe-area-inset-bottom, 12px);
+		}
+
 		@media (max-width: 960px) {
 			.app-main {
 				grid-template-columns: 1fr;

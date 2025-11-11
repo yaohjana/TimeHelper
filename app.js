@@ -837,6 +837,32 @@ function detectLang(text) {
 	return "en-US";
 }
 
+function setupResponsiveLayout() {
+	const isTouchDevice = () => {
+		return "ontouchstart" in window || (navigator.maxTouchPoints || 0) > 1 || (navigator.msMaxTouchPoints || 0) > 0;
+	};
+	const widthQuery = window.matchMedia("(max-width: 900px)");
+	const portraitQuery = window.matchMedia("(orientation: portrait)");
+	const update = () => {
+		const isPortrait = portraitQuery.matches || window.innerHeight >= window.innerWidth;
+		const shouldMobile = isTouchDevice() && widthQuery.matches && isPortrait;
+		document.body.classList.toggle("mobile-layout", shouldMobile);
+	};
+	const register = (mq) => {
+		if (!mq) return;
+		if (typeof mq.addEventListener === "function") {
+			mq.addEventListener("change", update);
+		} else if (typeof mq.addListener === "function") {
+			mq.addListener(update);
+		}
+	};
+	register(widthQuery);
+	register(portraitQuery);
+	window.addEventListener("resize", update);
+	window.addEventListener("orientationchange", update);
+	update();
+}
+
 // 自訂預設儲存
 const LS_KEY = "Times.userPresets.v1";
 function loadUserPresets() {
@@ -858,6 +884,7 @@ function saveUserPresets(obj) {
 // 啟動
 window.addEventListener("DOMContentLoaded", async () => {
 	if (!document.getElementById("appRoot")) return;
+	setupResponsiveLayout();
 	const themeMeta = await loadThemesMetadata();
 	const controller = new UIController();
 	await controller.initialize(themeMeta);
