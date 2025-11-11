@@ -43,12 +43,10 @@ class SequenceTimer {
 			this.remainingSeconds -= 1;
 			this.onTick(this.snapshot());
 			this.onTickSound(this.snapshot());
-			// 每 10 秒播報一次剩餘時間，最後 5 秒每秒播報
+			// 語音播報：依剩餘時間分級
 			if (this.remainingSeconds > 0) {
 				const rs = this.remainingSeconds;
-				const every10 = rs % 10 === 0 && rs >= 10;
-				const final5 = rs <= 5;
-				if ((every10 || final5) && this._lastAnnouncedRemaining !== rs) {
+				if (this.shouldAnnounceRemaining(rs) && this._lastAnnouncedRemaining !== rs) {
 					this._lastAnnouncedRemaining = rs;
 					this.onAnnounceRemaining(rs, this.snapshot());
 				}
@@ -119,6 +117,12 @@ class SequenceTimer {
 	}
 	setAutoRepeat(enabled) {
 		this.autoRepeat = !!enabled;
+	}
+	shouldAnnounceRemaining(rs) {
+		if (rs > 300) return rs % 600 === 0;
+		if (rs > 60) return rs % 60 === 0;
+		if (rs > 5) return rs % 20 === 0;
+		return rs > 0;
 	}
 }
 
@@ -707,8 +711,10 @@ class UIController {
 				await this.speaker.speakAsync(`${name}開始`);
 			}
 			// 3 秒倒數
+			//if (this.dom.voiceToggle.checked) {
+			//	await this.speaker.speakAsync("三二一");
+			//}
 			for (let i = 3; i >= 1; i--) {
-				if (this.dom.voiceToggle.checked) await this.speaker.speakAsync(String(i));
 				this.beeper.tick();
 				await sleep(1000);
 			}
