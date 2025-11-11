@@ -844,8 +844,10 @@ function setupResponsiveLayout() {
 	const widthQuery = window.matchMedia("(max-width: 900px)");
 	const portraitQuery = window.matchMedia("(orientation: portrait)");
 	const update = () => {
+		const viewportWidth = Math.min(window.innerWidth || 0, document.documentElement ? document.documentElement.clientWidth : window.innerWidth || 0);
 		const isPortrait = portraitQuery.matches || window.innerHeight >= window.innerWidth;
-		const shouldMobile = isTouchDevice() && widthQuery.matches && isPortrait;
+		const narrowEnough = widthQuery.matches || viewportWidth <= 900;
+		const shouldMobile = isTouchDevice() && narrowEnough && isPortrait;
 		document.body.classList.toggle("mobile-layout", shouldMobile);
 	};
 	const register = (mq) => {
