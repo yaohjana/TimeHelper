@@ -444,6 +444,7 @@ class UIController {
 				this.speaker.speak(formatZhRemaining(rs));
 			}
 		});
+		this.isFullscreen = false;
 		this.installHandlers();
 	}
 	queryDom() {
@@ -459,6 +460,16 @@ class UIController {
 			startBtn: document.getElementById("startBtn"),
 			pauseBtn: document.getElementById("pauseBtn"),
 			resetBtn: document.getElementById("resetBtn"),
+			fullscreenBtn: document.getElementById("fullscreenBtn"),
+			fullscreenOverlay: document.getElementById("fullscreenOverlay"),
+			fullscreenStepName: document.getElementById("fullscreenStepName"),
+			fullscreenTimeLeft: document.getElementById("fullscreenTimeLeft"),
+			fullscreenInstructionPanel: document.getElementById("fullscreenInstructionPanel"),
+			fullscreenInstruction: document.getElementById("fullscreenInstruction"),
+			fullscreenStartBtn: document.getElementById("fullscreenStartBtn"),
+			fullscreenPauseBtn: document.getElementById("fullscreenPauseBtn"),
+			fullscreenResetBtn: document.getElementById("fullscreenResetBtn"),
+			fullscreenExitBtn: document.getElementById("fullscreenExitBtn"),
 			beepToggle: document.getElementById("beepToggle"),
 			tickToggle: document.getElementById("tickToggle"),
 			voiceToggle: document.getElementById("voiceToggle"),
@@ -616,6 +627,13 @@ class UIController {
 		if (this.dom.startBtn) this.dom.startBtn.addEventListener("click", () => this.startWithAnnouncement());
 		if (this.dom.pauseBtn) this.dom.pauseBtn.addEventListener("click", () => this.timer.pause());
 		if (this.dom.resetBtn) this.dom.resetBtn.addEventListener("click", () => this.timer.reset());
+		if (this.dom.fullscreenBtn) this.dom.fullscreenBtn.addEventListener("click", () => this.toggleFullscreen());
+		if (this.dom.timeLeft) this.dom.timeLeft.addEventListener("click", () => this.toggleFullscreen());
+		if (this.dom.fullscreenTimeLeft) this.dom.fullscreenTimeLeft.addEventListener("click", () => this.toggleFullscreen());
+		if (this.dom.fullscreenStartBtn) this.dom.fullscreenStartBtn.addEventListener("click", () => this.startWithAnnouncement());
+		if (this.dom.fullscreenPauseBtn) this.dom.fullscreenPauseBtn.addEventListener("click", () => this.timer.pause());
+		if (this.dom.fullscreenResetBtn) this.dom.fullscreenResetBtn.addEventListener("click", () => this.timer.reset());
+		if (this.dom.fullscreenExitBtn) this.dom.fullscreenExitBtn.addEventListener("click", () => this.toggleFullscreen());
 		if (this.dom.themeSelect) this.dom.themeSelect.addEventListener("change", (e) => {
 			const value = e.target.value;
 			this.switchTheme(value);
@@ -636,9 +654,21 @@ class UIController {
 				if (e.target === this.dom.editorBackdrop) this.closeEditor();
 			});
 		}
-		// 按 ESC 關閉
+		// 按 ESC 關閉編輯器或全螢幕
 		document.addEventListener("keydown", (e) => {
-			if (e.key === "Escape" && this.dom.editorBackdrop && !this.dom.editorBackdrop.hidden) this.closeEditor();
+			if (e.key === "Escape") {
+				if (this.dom.editorBackdrop && !this.dom.editorBackdrop.hidden) {
+					this.closeEditor();
+				} else if (this.isFullscreen) {
+					this.toggleFullscreen();
+				}
+			}
+			// 按 X 鍵切換全螢幕
+			if (e.key === "x" || e.key === "X") {
+				if (!this.dom.editorBackdrop || this.dom.editorBackdrop.hidden) {
+					this.toggleFullscreen();
+				}
+			}
 		});
 		// 保險：若個別事件未綁定，改用事件委派監聽 editorClose
 		document.addEventListener("click", (e) => {
@@ -668,15 +698,42 @@ class UIController {
 	}
 	render(snapshot) {
 		const step = snapshot.currentStep;
-		this.dom.currentName.textContent = step ? step.name : "未選擇";
-		this.dom.timeLeft.textContent = formatSeconds(snapshot.remainingSeconds || 0);
+		const stepName = step ? step.name : "未選擇";
+		const timeText = formatSeconds(snapshot.remainingSeconds || 0);
+		const isRunning = snapshot.isRunning;
+		
+		// 更新正常模式
+		this.dom.currentName.textContent = stepName;
+		this.dom.timeLeft.textContent = timeText;
+		
+		// 更新全螢幕模式
+		if (this.dom.fullscreenStepName) this.dom.fullscreenStepName.textContent = stepName;
+		if (this.dom.fullscreenTimeLeft) this.dom.fullscreenTimeLeft.textContent = timeText;
+		
+		// 同步按鈕狀態
+		if (this.dom.fullscreenStartBtn) {
+			this.dom.fullscreenStartBtn.style.display = isRunning ? "none" : "inline-block";
+		}
+		if (this.dom.fullscreenPauseBtn) {
+			this.dom.fullscreenPauseBtn.style.display = isRunning ? "inline-block" : "none";
+		}
+		
 		this.highlightStep(snapshot);
-		// 顯示動作指引
+		
+		// 顯示動作指引（正常模式）
 		if (step && step.instruction) {
 			this.dom.currentInstruction.textContent = step.instruction;
 			this.dom.instructionPanel.hidden = false;
 		} else {
 			this.dom.instructionPanel.hidden = true;
+		}
+		
+		// 顯示動作指引（全螢幕模式）
+		if (step && step.instruction) {
+			if (this.dom.fullscreenInstruction) this.dom.fullscreenInstruction.textContent = step.instruction;
+			if (this.dom.fullscreenInstructionPanel) this.dom.fullscreenInstructionPanel.hidden = false;
+		} else {
+			if (this.dom.fullscreenInstructionPanel) this.dom.fullscreenInstructionPanel.hidden = true;
 		}
 	}
 	onCompleted() {
@@ -834,6 +891,28 @@ class UIController {
 		saveUserPresets(store);
 		this.closeEditor();
 		this.populatePresetSelect();
+	}
+	
+	// 全螢幕功能
+	toggleFullscreen() {
+		this.isFullscreen = !this.isFullscreen;
+		if (this.isFullscreen) {
+			document.body.classList.add("fullscreen-mode");
+			if (this.dom.fullscreenBtn) this.dom.fullscreenBtn.textContent = "退出全螢幕";
+			// 初始化全螢幕按鈕狀態
+			const snapshot = this.timer.snapshot();
+			if (this.dom.fullscreenStartBtn) {
+				this.dom.fullscreenStartBtn.style.display = snapshot.isRunning ? "none" : "inline-block";
+			}
+			if (this.dom.fullscreenPauseBtn) {
+				this.dom.fullscreenPauseBtn.style.display = snapshot.isRunning ? "inline-block" : "none";
+			}
+		} else {
+			document.body.classList.remove("fullscreen-mode");
+			if (this.dom.fullscreenBtn) this.dom.fullscreenBtn.textContent = "全螢幕";
+		}
+		// 同步更新全螢幕模式的顯示
+		this.render(this.timer.snapshot());
 	}
 }
 

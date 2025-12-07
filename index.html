@@ -39,7 +39,7 @@
 			<section class="timer-panel card">
 				<div class="now-title">目前步驟</div>
 				<div id="currentName" class="step-name">未選擇</div>
-				<div id="timeLeft" class="time-left">00:00</div>
+				<div id="timeLeft" class="time-left" title="點擊切換全螢幕（或按 X 鍵）">00:00</div>
 				<div id="instructionPanel" class="instruction-panel" hidden>
 					<div class="instruction-title">動作指引</div>
 					<div id="currentInstruction" class="instruction-content"></div>
@@ -48,6 +48,7 @@
 					<button id="startBtn" class="primary">開始</button>
 					<button id="pauseBtn">暫停</button>
 					<button id="resetBtn" class="danger">重設</button>
+					<button id="fullscreenBtn" class="secondary" title="切換全螢幕（或按 X 鍵）">全螢幕</button>
 				</div>
 				<div class="loops-row">
 					<label>迴圈組數
@@ -65,6 +66,25 @@
 				<ol id="stepsList" class="steps-list"></ol>
 			</section>
 		</main>
+	</div>
+
+	<!-- 全螢幕模式覆蓋層 -->
+	<div id="fullscreenOverlay" class="fullscreen-overlay">
+		<div class="fullscreen-exit-hint">按 ESC 或點擊時間退出全螢幕</div>
+		<div class="fullscreen-content">
+			<div id="fullscreenStepName" class="step-name">未選擇</div>
+			<div id="fullscreenTimeLeft" class="time-left" title="點擊退出全螢幕">00:00</div>
+			<div id="fullscreenInstructionPanel" class="instruction-panel" hidden>
+				<div class="instruction-title">動作指引</div>
+				<div id="fullscreenInstruction" class="instruction-content"></div>
+			</div>
+			<div class="fullscreen-controls">
+				<button id="fullscreenStartBtn" class="primary">開始</button>
+				<button id="fullscreenPauseBtn">暫停</button>
+				<button id="fullscreenResetBtn" class="danger">重設</button>
+				<button id="fullscreenExitBtn" class="secondary">退出全螢幕</button>
+			</div>
+		</div>
 	</div>
 
 	<!-- 自訂計時器編輯器 -->
@@ -246,6 +266,13 @@
 			line-height: 1;
 			letter-spacing: 1px;
 			text-shadow: 0 10px 40px rgba(88, 166, 255, .3);
+			cursor: pointer;
+			user-select: none;
+			transition: transform 0.2s;
+		}
+
+		.timer-panel .time-left:hover {
+			transform: scale(1.02);
 		}
 
 		.timer-panel .buttons {
@@ -452,6 +479,41 @@
 			max-height: 40vh;
 		}
 
+		@media (max-width: 768px) {
+			.fullscreen-content .step-name {
+				font-size: 32px;
+			}
+
+			.fullscreen-content .time-left {
+				font-size: 120px;
+			}
+
+			.fullscreen-content .instruction-panel {
+				font-size: 16px;
+				padding: 12px;
+			}
+
+			.fullscreen-content .instruction-content {
+				font-size: 16px;
+			}
+
+			.fullscreen-controls {
+				flex-direction: column;
+			}
+
+			.fullscreen-controls button {
+				width: 100%;
+				max-width: 300px;
+			}
+
+			.fullscreen-exit-hint {
+				top: 10px;
+				right: 10px;
+				font-size: 12px;
+				padding: 8px 12px;
+			}
+		}
+
 		body.mobile-layout .backdrop {
 			align-items: stretch;
 			padding: 0;
@@ -489,6 +551,101 @@
 			border: 1px solid #334155; 
 			border-radius: 999px; 
 			color: #334155;
+		}
+
+		/* 全螢幕模式 */
+		body.fullscreen-mode {
+			overflow: hidden;
+		}
+
+		.fullscreen-overlay {
+			position: fixed;
+			inset: 0;
+			background: radial-gradient(1200px 700px at 10% 10%, #1b2a4a 0%, transparent 60%),
+				radial-gradient(1200px 700px at 90% 20%, #11354a 0%, transparent 60%),
+				linear-gradient(160deg, var(--bg1), var(--bg2));
+			z-index: 1000;
+			display: none;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			padding: 40px;
+		}
+
+		body.fullscreen-mode .fullscreen-overlay {
+			display: flex;
+		}
+
+		.fullscreen-content {
+			text-align: center;
+			max-width: 90vw;
+			width: 100%;
+		}
+
+		.fullscreen-content .step-name {
+			font-size: 48px;
+			font-weight: 700;
+			margin-bottom: 20px;
+			text-shadow: 0 2px 8px rgba(34, 211, 238, .2);
+		}
+
+		.fullscreen-content .time-left {
+			font-size: 180px;
+			line-height: 1;
+			letter-spacing: 2px;
+			text-shadow: 0 20px 60px rgba(88, 166, 255, .4);
+			margin-bottom: 30px;
+			cursor: pointer;
+			user-select: none;
+			transition: transform 0.2s;
+		}
+
+		.fullscreen-content .time-left:hover {
+			transform: scale(1.05);
+		}
+
+		.fullscreen-content .instruction-panel {
+			max-width: 800px;
+			margin: 0 auto 30px;
+			font-size: 18px;
+		}
+
+		.fullscreen-content .instruction-title {
+			font-size: 16px;
+		}
+
+		.fullscreen-content .instruction-content {
+			font-size: 18px;
+			line-height: 1.8;
+		}
+
+		.fullscreen-controls {
+			display: flex;
+			gap: 15px;
+			justify-content: center;
+			flex-wrap: wrap;
+		}
+
+		.fullscreen-controls button {
+			padding: 15px 25px;
+			font-size: 16px;
+			min-width: 120px;
+		}
+
+		.fullscreen-controls button[style*="display: none"] {
+			display: none !important;
+		}
+
+		.fullscreen-exit-hint {
+			position: absolute;
+			top: 20px;
+			right: 20px;
+			color: var(--muted);
+			font-size: 14px;
+			padding: 10px 15px;
+			background: rgba(15, 23, 42, 0.8);
+			border: 1px solid var(--border);
+			border-radius: 8px;
 		}
 	</style>
 	<script src="./app.js"></script>
