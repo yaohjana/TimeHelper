@@ -708,7 +708,10 @@ class UIController {
 		
 		// 更新全螢幕模式
 		if (this.dom.fullscreenStepName) this.dom.fullscreenStepName.textContent = stepName;
-		if (this.dom.fullscreenTimeLeft) this.dom.fullscreenTimeLeft.textContent = timeText;
+		if (this.dom.fullscreenTimeLeft) {
+			this.dom.fullscreenTimeLeft.textContent = timeText;
+			this.dom.fullscreenTimeLeft.setAttribute("data-time", timeText);
+		}
 		
 		// 同步按鈕狀態
 		if (this.dom.fullscreenStartBtn) {

@@ -1,0 +1,53 @@
+---
+rule:
+  description: |
+    須在HTML專案中連接Firebase (通常用CDN或npm引入Firebase SDK)，並正確初始化Firebase App及Firestore或Realtime Database。
+    資料操作（如新增/查詢/修改/刪除等）皆需透過Firebase的API，並考慮權限規則及驗證（例如Firestore安全規則）。
+    UI 元件應與Firebase資料雙向同步（例如使用onSnapshot或onValue訂閱實時變化）。
+    初始連線資訊（apiKey, authDomain, projectId, 等）請存於專案環境安全區塊，不允許硬編碼於公開repo。
+    使用者輸入須經過驗證及防XSS處理後，才可寫入Firebase資料庫。
+
+examples:
+  - desc: "初始化Firebase，連接Firestore於HTML網頁"
+    code: |
+      <!-- Firebase App (CDN) -->
+      <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+      <script>
+        // Firebase 設定（請用安全方式提供這些設定）
+        const firebaseConfig = {
+          apiKey: "<YOUR_API_KEY>",
+          authDomain: "<YOUR_AUTH_DOMAIN>",
+          projectId: "<YOUR_PROJECT_ID>",
+        };
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+      </script>
+  - desc: "新增一筆資料到Firestore（表單送出）"
+    code: |
+      <form id="addForm">
+        <input type="text" id="title" />
+        <button type="submit">新增</button>
+      </form>
+      <script>
+        document.getElementById('addForm').onsubmit = function(e){
+          e.preventDefault();
+          let title = document.getElementById('title').value.trim();
+          // 基本防XSS
+          title = title.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+          db.collection("items").add({ title, created: new Date() });
+        }
+      </script>
+  - desc: "及時監聽資料並同步到網頁"
+    code: |
+      <ul id="list"></ul>
+      <script>
+        db.collection("items").orderBy("created", "desc").onSnapshot(snapshot => {
+          let html = "";
+          snapshot.forEach(doc => {
+            const d = doc.data();
+            html += `<li>${d.title}</li>`;
+          });
+          document.getElementById("list").innerHTML = html;
+        });
+      </script>
