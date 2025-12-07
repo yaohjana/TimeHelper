@@ -1,10 +1,11 @@
 //Times/app.js 時間步調管理系統，可以設計各種計時器，例如泡綠茶、沖咖啡、養身操、超慢跑、單槓運動、跳繩、泡各種茶
 
-// 單一步驟（名稱 + 秒數）
+// 單一步驟（名稱 + 秒數 + 動作指引）
 class Step {
-	constructor(name, seconds) {
+	constructor(name, seconds, instruction = "") {
 		this.name = name;
 		this.seconds = Math.max(0, Math.floor(seconds || 0));
+		this.instruction = instruction || "";
 	}
 }
 
@@ -453,6 +454,8 @@ class UIController {
 			stepsList: document.getElementById("stepsList"),
 			currentName: document.getElementById("currentName"),
 			timeLeft: document.getElementById("timeLeft"),
+			instructionPanel: document.getElementById("instructionPanel"),
+			currentInstruction: document.getElementById("currentInstruction"),
 			startBtn: document.getElementById("startBtn"),
 			pauseBtn: document.getElementById("pauseBtn"),
 			resetBtn: document.getElementById("resetBtn"),
@@ -599,12 +602,12 @@ class UIController {
 		if (value.startsWith("builtin::")) {
 			const name = value.slice("builtin::".length);
 			this.sequenceName = name;
-			steps = (this.builtinPresets[name] || []).map(s => new Step(s.name, s.seconds));
+			steps = (this.builtinPresets[name] || []).map(s => new Step(s.name, s.seconds, s.instruction || ""));
 		} else if (value.startsWith("custom::")) {
 			const name = value.slice("custom::".length);
 			this.sequenceName = name;
 			const user = loadUserPresets();
-			steps = (user[name] || []).map(s => new Step(s.name, s.seconds));
+			steps = (user[name] || []).map(s => new Step(s.name, s.seconds, s.instruction || ""));
 		}
 		this.timer.replaceSteps(steps);
 		this.renderSteps(steps);
@@ -668,6 +671,13 @@ class UIController {
 		this.dom.currentName.textContent = step ? step.name : "未選擇";
 		this.dom.timeLeft.textContent = formatSeconds(snapshot.remainingSeconds || 0);
 		this.highlightStep(snapshot);
+		// 顯示動作指引
+		if (step && step.instruction) {
+			this.dom.currentInstruction.textContent = step.instruction;
+			this.dom.instructionPanel.hidden = false;
+		} else {
+			this.dom.instructionPanel.hidden = true;
+		}
 	}
 	onCompleted() {
 		this.beeper.beep(220, 1200);
@@ -736,19 +746,19 @@ class UIController {
 	// 編輯器
 	openEditorWithCurrent() {
 		const val = this.dom.presetSelect.value;
-		let steps = this.timer.steps.map(s => new Step(s.name, s.seconds));
+		let steps = this.timer.steps.map(s => new Step(s.name, s.seconds, s.instruction || ""));
 		let name = "";
 		if (val.startsWith("custom::")) name = val.slice("custom::".length);
 		this.dom.customName.value = name;
 		this.dom.editorSteps.innerHTML = "";
-		steps.forEach(s => this.addEditorRow(s.name, s.seconds));
+		steps.forEach(s => this.addEditorRow(s.name, s.seconds, s.instruction));
 		if (steps.length === 0) this.addEditorRow();
 		this.dom.editorBackdrop.hidden = false;
 	}
 	closeEditor() {
 		this.dom.editorBackdrop.hidden = true;
 	}
-	addEditorRow(name = "", seconds = 60) {
+		addEditorRow(name = "", seconds = 60, instruction = "") {
 		const wrap = document.createElement("div");
 		wrap.className = "editor-step";
 		const nameInput = document.createElement("input");
@@ -759,13 +769,19 @@ class UIController {
 		secInput.type = "number";
 		secInput.min = "0";
 		secInput.value = String(seconds);
+		const instInput = document.createElement("textarea");
+		instInput.placeholder = "動作指引（選填）";
+		instInput.value = instruction;
+		instInput.rows = 2;
+		instInput.style.width = "100%";
+		instInput.style.gridColumn = "1 / -1";
 		const tools = document.createElement("div");
 		tools.className = "tools";
 		const upBtn = document.createElement("button"); upBtn.className = "small"; upBtn.textContent = "上移";
 		const downBtn = document.createElement("button"); downBtn.className = "small"; downBtn.textContent = "下移";
 		const delBtn = document.createElement("button"); delBtn.className = "danger small"; delBtn.textContent = "刪除";
 		tools.appendChild(upBtn); tools.appendChild(downBtn); tools.appendChild(delBtn);
-		wrap.appendChild(nameInput); wrap.appendChild(secInput); wrap.appendChild(tools);
+		wrap.appendChild(nameInput); wrap.appendChild(secInput); wrap.appendChild(instInput); wrap.appendChild(tools);
 		this.dom.editorSteps.appendChild(wrap);
 		upBtn.addEventListener("click", () => {
 			const prev = wrap.previousElementSibling;
@@ -781,11 +797,16 @@ class UIController {
 		const rows = Array.from(this.dom.editorSteps.children);
 		const steps = [];
 		for (const row of rows) {
-			const [nameInput, secInput] = row.querySelectorAll("input");
+			const inputs = row.querySelectorAll("input");
+			const textareas = row.querySelectorAll("textarea");
+			const nameInput = inputs[0];
+			const secInput = inputs[1];
+			const instInput = textareas[0];
 			const name = nameInput.value.trim();
 			const seconds = Math.max(0, Math.floor(Number(secInput.value || 0)));
+			const instruction = instInput ? instInput.value.trim() : "";
 			if (!name) continue;
-			steps.push(new Step(name, seconds));
+			steps.push(new Step(name, seconds, instruction));
 		}
 		return steps;
 	}
@@ -795,7 +816,7 @@ class UIController {
 		const steps = this.collectEditorSteps();
 		if (steps.length === 0) { alert("請至少新增一個步驟"); return; }
 		const store = loadUserPresets();
-		store[name] = steps.map(s => ({ name: s.name, seconds: s.seconds }));
+		store[name] = steps.map(s => ({ name: s.name, seconds: s.seconds, instruction: s.instruction || "" }));
 		saveUserPresets(store);
 		this.closeEditor();
 		this.populatePresetSelect();
@@ -1060,7 +1081,8 @@ function normalizePresetEntries(entries) {
 		const normalizedSteps = steps.map((step) => {
 			const stepName = String(step && step.name ? step.name : "").trim();
 			const seconds = Math.max(0, Math.floor(Number(step && step.seconds != null ? step.seconds : 0)));
-			return stepName ? { name: stepName, seconds } : null;
+			const instruction = step && step.instruction ? String(step.instruction).trim() : "";
+			return stepName ? { name: stepName, seconds, instruction } : null;
 		}).filter(Boolean);
 		if (normalizedSteps.length) {
 			result[name] = normalizedSteps;
