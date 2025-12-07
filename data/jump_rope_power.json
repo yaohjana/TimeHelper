@@ -4,73 +4,72 @@
 		{
 			"name": "初階節奏跳繩",
 			"steps": [
-				{ "name": "暖身跳步", "seconds": 180 },
-				{ "name": "基本單跳", "seconds": 60 },
-				{ "name": "休息", "seconds": 30 },
-				{ "name": "左右換腳跳", "seconds": 60 },
-				{ "name": "休息", "seconds": 30 },
-				{ "name": "高抬膝跳", "seconds": 60 },
-				{ "name": "休息", "seconds": 30 },
-				{ "name": "雙腳並跳", "seconds": 60 },
-				{ "name": "緩和伸展", "seconds": 180 }
+				{ "name": "暖身跳步", "seconds": 180, "instruction": "輕鬆踏步，活動手腕及腳踝，讓全身逐步熱開，為後續運動做準備。" },
+				{ "name": "基本單跳", "seconds": 60, "instruction": "每一圈繩只跳一次，保持穩定節奏，膝蓋微屈，腳尖落地，核心收緊。" },
+				{ "name": "休息", "seconds": 30, "instruction": "原地走動或輕鬆呼吸，讓心跳緩和。" },
+				{ "name": "左右換腳跳", "seconds": 60, "instruction": "交替左右腳著地跳繩，模擬跑步動作，注意掌控呼吸。" },
+				{ "name": "休息", "seconds": 30, "instruction": "深呼吸，勿坐下，保持身體暖機狀態。" },
+				{ "name": "高抬膝跳", "seconds": 60, "instruction": "跳繩同時，膝蓋輪流抬高至腰部，增強腿部肌力與心肺耐力。" },
+				{ "name": "休息", "seconds": 30, "instruction": "放鬆雙手、雙腳，喝口水，預備下個動作。" },
+				{ "name": "雙腳並跳", "seconds": 60, "instruction": "雙腳併攏同步起跳，保持跳躍節奏穩定，收緊核心。" },
+				{ "name": "緩和伸展", "seconds": 180, "instruction": "慢步移動並拉伸小腿、手臂、肩膀，使心率逐步下降。" }
 			]
 		},
 		{
 			"name": "間歇燃脂跳繩 20 分鐘",
 			"steps": [
-				{ "name": "動態暖身", "seconds": 240 },
-				{ "name": "快速雙腳跳 45 秒", "seconds": 45 },
-				{ "name": "休息", "seconds": 30 },
-				{ "name": "交叉跳 45 秒", "seconds": 45 },
-				{ "name": "休息", "seconds": 30 },
-				{ "name": "雙搖跳 30 秒", "seconds": 30 },
-				{ "name": "休息", "seconds": 30 },
-				{ "name": "後踢腿跳 45 秒", "seconds": 45 },
-				{ "name": "休息", "seconds": 60 },
-				{ "name": "核心訓練與伸展", "seconds": 240 }
+				{ "name": "動態暖身", "seconds": 240, "instruction": "做腿部蹬伸、手臂環繞與輕跳，幫助全身預熱與活動關節。" },
+				{ "name": "快速雙腳跳 45 秒", "seconds": 45, "instruction": "以最快的安全速度連續雙腳跳繩，盡量維持節奏，挑戰自己極限。" },
+				{ "name": "休息", "seconds": 30, "instruction": "調整呼吸，原地輕走避免心跳掉落過快。" },
+				{ "name": "交叉跳 45 秒", "seconds": 45, "instruction": "雙腳交叉變換著地，每跳一次換腳一次，協調雙手同步轉繩。" },
+				{ "name": "休息", "seconds": 30, "instruction": "全身放鬆，補充一點水分。" },
+				{ "name": "雙搖跳 30 秒", "seconds": 30, "instruction": "每次起跳時繩子快速轉兩圈，身體保持挺直、核心要用力穩定。" },
+				{ "name": "休息", "seconds": 30, "instruction": "感受身體心跳，調節呼吸，預備下個高強度動作。" },
+				{ "name": "後踢腿跳 45 秒", "seconds": 45, "instruction": "每跳一下，腳跟往臀部踢起，強化大腿後側與臀部肌群。" },
+				{ "name": "休息", "seconds": 60, "instruction": "深呼吸、輕鬆活動髖關節及小腿，緩和心跳。" },
+				{ "name": "核心訓練與伸展", "seconds": 240, "instruction": "做棒式支撐、側抬腿與全身伸展，幫助恢復並放鬆肌肉。" }
 			]
 		},
 		{
 			"name": "速度挑戰（競速跳）",
 			"steps": [
-				{ "name": "暖身與腳踝啟動", "seconds": 180 },
-				{ "name": "速度測試 30 秒", "seconds": 30 },
-				{ "name": "休息", "seconds": 30 },
-				{ "name": "速度挑戰第二輪", "seconds": 30 },
-				{ "name": "休息", "seconds": 30 },
-				{ "name": "速度挑戰第三輪", "seconds": 30 },
-				{ "name": "休息與調息", "seconds": 60 },
-				{ "name": "敏捷梯或小步快踏", "seconds": 120 },
-				{ "name": "伸展放鬆", "seconds": 180 }
+				{ "name": "暖身與腳踝啟動", "seconds": 180, "instruction": "環繞腳踝、繞環跳及甩繩，激活下肢關節，預防運動傷害。" },
+				{ "name": "速度測試 30 秒", "seconds": 30, "instruction": "盡全力快跳，看30秒內能跳幾下，專注穩定呼吸與動作。" },
+				{ "name": "休息", "seconds": 30, "instruction": "輕鬆移動雙腳，搖晃手腕，以保持血液循環。" },
+				{ "name": "速度挑戰第二輪", "seconds": 30, "instruction": "重複高速跳繩，努力打破上一輪的計數。" },
+				{ "name": "休息", "seconds": 30, "instruction": "深呼吸，簡單伸展小腿、手臂等部位。" },
+				{ "name": "速度挑戰第三輪", "seconds": 30, "instruction": "最後一輪全力跳，保持正確動作，注意安全。" },
+				{ "name": "休息與調息", "seconds": 60, "instruction": "慢慢走動，調整呼吸，幫助身體恢復。" },
+				{ "name": "敏捷梯或小步快踏", "seconds": 120, "instruction": "可用敏捷梯或地面劃線進行快踏練習，提升腳步敏捷度。" },
+				{ "name": "伸展放鬆", "seconds": 180, "instruction": "重點拉伸小腿、腿後肌、手臂和腰部，幫助肌肉放鬆。" }
 			]
 		},
 		{
 			"name": "團隊跳繩課程 30 分鐘",
 			"steps": [
-				{ "name": "集合與器材檢查", "seconds": 120 },
-				{ "name": "團體暖身與協調練習", "seconds": 300 },
-				{ "name": "基本節奏同步訓練", "seconds": 240 },
-				{ "name": "組合步伐與變化", "seconds": 240 },
-				{ "name": "轉換練習與互換夥伴", "seconds": 180 },
-				{ "name": "團體接力挑戰", "seconds": 240 },
-				{ "name": "放鬆與分享回饋", "seconds": 180 }
+				{ "name": "集合與器材檢查", "seconds": 120, "instruction": "點名集合、說明課程流程，檢查繩子與場地安全。" },
+				{ "name": "團體暖身與協調練習", "seconds": 300, "instruction": "進行關節活動操，帶領全員做同步踏步與手腳協調練習。" },
+				{ "name": "基本節奏同步訓練", "seconds": 240, "instruction": "全體同時起跳，保持一致節奏，增進團體默契與律動感。" },
+				{ "name": "組合步伐與變化", "seconds": 240, "instruction": "練習兩人以上不同步伐轉換，例如單跳、左右腳跳、交叉步等組合。" },
+				{ "name": "轉換練習與互換夥伴", "seconds": 180, "instruction": "依指令換隊形或隊員間快速輪換，提高專注力與團隊協作。" },
+				{ "name": "團體接力挑戰", "seconds": 240, "instruction": "分組輪流接力，計時比賽，看那組跳的次數最多不中斷。" },
+				{ "name": "放鬆與分享回饋", "seconds": 180, "instruction": "伸展肌群、放鬆手腳，邀請夥伴簡短分享跳繩心得。" }
 			]
 		},
 		{
 			"name": "跳繩+自體重混合課",
 			"steps": [
-				{ "name": "暖身與跳躍啟動", "seconds": 240 },
-				{ "name": "跳繩 1 分鐘", "seconds": 60 },
-				{ "name": "伏地挺身 45 秒", "seconds": 45 },
-				{ "name": "休息", "seconds": 30 },
-				{ "name": "跳繩 1 分鐘", "seconds": 60 },
-				{ "name": "深蹲 45 秒", "seconds": 45 },
-				{ "name": "休息", "seconds": 30 },
-				{ "name": "跳繩 1 分鐘", "seconds": 60 },
-				{ "name": "平板支撐 45 秒", "seconds": 45 },
-				{ "name": "休息與伸展", "seconds": 180 }
+				{ "name": "暖身與跳躍啟動", "seconds": 240, "instruction": "全身關節活動操，混合輕跳與手臂擺動，提升核心溫度。" },
+				{ "name": "跳繩 1 分鐘", "seconds": 60, "instruction": "雙腳穩定連續跳繩一分鐘，保持均勻呼吸。" },
+				{ "name": "伏地挺身 45 秒", "seconds": 45, "instruction": "標準伏地挺身，軀幹收緊，手肘朝後，腳尖支撐全身。" },
+				{ "name": "休息", "seconds": 30, "instruction": "原地輕鬆走動，調整呼吸，預備下一項。" },
+				{ "name": "跳繩 1 分鐘", "seconds": 60, "instruction": "再次進行穩定連續跳繩，盡量維持節奏。" },
+				{ "name": "深蹲 45 秒", "seconds": 45, "instruction": "腳與肩同寬，臀部往後坐至膝蓋呈約90度，起身時大腿發力。" },
+				{ "name": "休息", "seconds": 30, "instruction": "喘口氣，扭扭手腕、腳踝，準備最後一輪。" },
+				{ "name": "跳繩 1 分鐘", "seconds": 60, "instruction": "專注節奏與動作標準，完成最後一分鐘跳繩。" },
+				{ "name": "平板支撐 45 秒", "seconds": 45, "instruction": "肘膝撐地或標準平板撐，核心收緊，身體保持筆直不塌腰。" },
+				{ "name": "休息與伸展", "seconds": 180, "instruction": "全身肌群拉伸、深呼吸，讓身體徹底放鬆並恢復平穩。" }
 			]
 		}
 	]
 }
-

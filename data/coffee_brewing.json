@@ -4,91 +4,90 @@
 		{
 			"name": "淺焙衣索比亞 日曬花香",
 			"steps": [
-				{ "name": "悶蒸前置（30g注水）", "seconds": 45 },
-				{ "name": "第一段繞圈（120g）", "seconds": 40 },
-				{ "name": "第二段拉高（90g）", "seconds": 35 },
-				{ "name": "第三段收尾（70g）", "seconds": 30 },
-				{ "name": "滴濾完成", "seconds": 60 },
-				{ "name": "搖勻杯液", "seconds": 15 }
+				{ "name": "悶蒸前置（30g注水）", "seconds": 45, "instruction": "以約92℃熱水先注入30g於咖啡粉上，確保所有粉層皆均勻浸濕，悶蒸時間約45秒，有助釋放二氧化碳。" },
+				{ "name": "第一段繞圈（120g）", "seconds": 40, "instruction": "穩定手勢由中心向外繞圈緩慢注水，至總水量150g，維持水面不過高。此階段萃取咖啡果香前段。" },
+				{ "name": "第二段拉高（90g）", "seconds": 35, "instruction": "由上方逐步注入90g熱水，注水高度拉高些，刺激咖啡床促進萃取，至總水量240g。" },
+				{ "name": "第三段收尾（70g）", "seconds": 30, "instruction": "讓水位降至接近粉面，再溫和注入70g熱水，集中中心區，完整萃取甜感與餘韻。" },
+				{ "name": "滴濾完成", "seconds": 60, "instruction": "等待所有水分自然滴濾完成，切勿搖晃濾杯，整個過程控制於3分鐘左右。" },
+				{ "name": "搖勻杯液", "seconds": 15, "instruction": "輕搖咖啡杯液，使風味均勻融合後即可品嚐。" }
 			]
 		},
 		{
 			"name": "中焙瓜地馬拉 洗處平衡",
 			"steps": [
-				{ "name": "預熱濾杯與伺服壺", "seconds": 30 },
-				{ "name": "悶蒸（40ml）", "seconds": 35 },
-				{ "name": "第一段注水至120ml", "seconds": 35 },
-				{ "name": "第二段注水至220ml", "seconds": 35 },
-				{ "name": "第三段注水至320ml", "seconds": 35 },
-				{ "name": "滴濾與整杯", "seconds": 70 }
+				{ "name": "預熱濾杯與伺服壺", "seconds": 30, "instruction": "用熱水溫熱濾杯與伺服壺，避免沖煮時熱能快速流失，提升整體口感協調度。" },
+				{ "name": "悶蒸（40ml）", "seconds": 35, "instruction": "注入40ml熱水於咖啡粉中央，靜置35秒悶蒸，幫助釋放多餘氣體，讓水流順暢。" },
+				{ "name": "第一段注水至120ml", "seconds": 35, "instruction": "由中心向外緩緩繞圈注水，至總水量120ml，控制線條細緻避免大力沖擊粉床。" },
+				{ "name": "第二段注水至220ml", "seconds": 35, "instruction": "待水面降低時再次繞圈注水，至總量220ml，保持穩定節奏。" },
+				{ "name": "第三段注水至320ml", "seconds": 35, "instruction": "持續繞圈至320ml，收尾時可集中中心，增強均衡度與甘甜。" },
+				{ "name": "滴濾與整杯", "seconds": 70, "instruction": "等待所有咖啡自然滴濾完畢，輕輕搖晃伺服壺混合，讓滋味均勻。" }
 			]
 		},
 		{
 			"name": "重焙蘇門答臘 曼特寧厚感",
 			"steps": [
-				{ "name": "溫杯與濾紙沖洗", "seconds": 30 },
-				{ "name": "悶蒸加蓋（40ml）", "seconds": 45 },
-				{ "name": "慢速第一段（100ml）", "seconds": 50 },
-				{ "name": "第二段維持低衝（90ml）", "seconds": 45 },
-				{ "name": "第三段集中中間（70ml）", "seconds": 45 },
-				{ "name": "悶杯萃取", "seconds": 40 }
+				{ "name": "溫杯與濾紙沖洗", "seconds": 30, "instruction": "使用熱水充分沖洗濾紙並預熱杯具，去除紙味並穩定溫度。" },
+				{ "name": "悶蒸加蓋（40ml）", "seconds": 45, "instruction": "注入40ml熱水後可於上方加蓋，提升保溫及風味釋放，悶蒸完成再取下。" },
+				{ "name": "慢速第一段（100ml）", "seconds": 50, "instruction": "採細緻小圈緩慢注水，使咖啡底蘊與焦糖厚度充分展現。" },
+				{ "name": "第二段維持低衝（90ml）", "seconds": 45, "instruction": "持續以低角度注入90ml，讓萃取更加穩定、保留醇厚口感。" },
+				{ "name": "第三段集中中間（70ml）", "seconds": 45, "instruction": "最後將70ml熱水集中注入粉床中心，鞏固尾韻。" },
+				{ "name": "悶杯萃取", "seconds": 40, "instruction": "取下濾杯後，讓咖啡在壺內悶置片刻，風味更集中。" }
 			]
 		},
 		{
 			"name": "日曬肯亞 冰萃手沖",
 			"steps": [
-				{ "name": "冰塊置入分享壺", "seconds": 20 },
-				{ "name": "悶蒸（35ml）", "seconds": 40 },
-				{ "name": "細水繞圈（150ml）", "seconds": 70 },
-				{ "name": "提升水柱沖入（120ml）", "seconds": 50 },
-				{ "name": "通過冰塊快速降溫", "seconds": 45 },
-				{ "name": "搖勻與裝杯", "seconds": 30 }
+				{ "name": "冰塊置入分享壺", "seconds": 20, "instruction": "預先將大量冰塊加入分享壺，備好急降溫準備。" },
+				{ "name": "悶蒸（35ml）", "seconds": 40, "instruction": "使用熱水35ml悶蒸咖啡粉，時間約40秒，凸顯日曬豆香氣。" },
+				{ "name": "細水繞圈（150ml）", "seconds": 70, "instruction": "採溫和細水繞圈注入150ml熱水，促進完整萃取。" },
+				{ "name": "提升水柱沖入（120ml）", "seconds": 50, "instruction": "手勢拉高使水柱注入120ml，活絡香氣並同步降溫。" },
+				{ "name": "通過冰塊快速降溫", "seconds": 45, "instruction": "咖啡液瀉入冰塊壺中，藉由大量冰塊立即冷卻。" },
+				{ "name": "搖勻與裝杯", "seconds": 30, "instruction": "均勻搖晃杯壺，將冰鎮咖啡倒入杯中即可享用。" }
 			]
 		},
 		{
 			"name": "厭氧處理 花果調性",
 			"steps": [
-				{ "name": "濾紙沖洗與粉床整平", "seconds": 25 },
-				{ "name": "悶蒸（45ml）", "seconds": 50 },
-				{ "name": "第一段前段（110ml）", "seconds": 40 },
-				{ "name": "第二段拉長（110ml）", "seconds": 45 },
-				{ "name": "第三段斷水點綴（80ml）", "seconds": 45 },
-				{ "name": "最後滴濾", "seconds": 60 }
+				{ "name": "濾紙沖洗與粉床整平", "seconds": 25, "instruction": "沖洗濾紙去除異味，輕拍濾杯讓粉床分布均勻平整。" },
+				{ "name": "悶蒸（45ml）", "seconds": 50, "instruction": "注入45ml熱水，靜置50秒釋放花果香前段氣息。" },
+				{ "name": "第一段前段（110ml）", "seconds": 40, "instruction": "採細圈緩慢注入110ml，使花香明顯釋放。" },
+				{ "name": "第二段拉長（110ml）", "seconds": 45, "instruction": "第二次延長水流，小圈繞至220ml，誘出甜感基調。" },
+				{ "name": "第三段斷水點綴（80ml）", "seconds": 45, "instruction": "最後80ml分次斷水加入，點綴層次與尾韻。" },
+				{ "name": "最後滴濾", "seconds": 60, "instruction": "讓咖啡自然滴盡，同時欣賞咖啡油脂與色澤。" }
 			]
 		},
 		{
 			"name": "蜜處理甜感強化",
 			"steps": [
-				{ "name": "預潤濾杯與粉床", "seconds": 25 },
-				{ "name": "悶蒸（40ml）", "seconds": 40 },
-				{ "name": "第一段專注中心（100ml）", "seconds": 35 },
-				{ "name": "第二段外圈擴散（100ml）", "seconds": 35 },
-				{ "name": "第三段回到中心（80ml）", "seconds": 35 },
-				{ "name": "滯留控制與收尾", "seconds": 60 }
+				{ "name": "預潤濾杯與粉床", "seconds": 25, "instruction": "用熱水沖洗濾杯、潤濕粉床，確保均勻。" },
+				{ "name": "悶蒸（40ml）", "seconds": 40, "instruction": "以40ml熱水悶蒸40秒，使蜜處理香甜前體釋出。" },
+				{ "name": "第一段專注中心（100ml）", "seconds": 35, "instruction": "將100ml熱水集中於粉床中心，萃取精華甜感。" },
+				{ "name": "第二段外圈擴散（100ml）", "seconds": 35, "instruction": "繞圈注入100ml，讓萃取覆蓋整體，提升豐富度。" },
+				{ "name": "第三段回到中心（80ml）", "seconds": 35, "instruction": "最後80ml熱水再次注入中心，收尾強化圓潤口感。" },
+				{ "name": "滯留控制與收尾", "seconds": 60, "instruction": "觀察咖啡滯留高度，最終滴盡即可品嘗層次口感。" }
 			]
 		},
 		{
 			"name": "手沖咖啡教學示範（分段解說）",
 			"steps": [
-				{ "name": "風味介紹與器材說明", "seconds": 120 },
-				{ "name": "研磨度與粉水比解析", "seconds": 150 },
-				{ "name": "悶蒸示範與重點", "seconds": 90 },
-				{ "name": "三段注水技巧講解", "seconds": 180 },
-				{ "name": "萃取判讀與調整", "seconds": 150 },
-				{ "name": "風味杯測與問答", "seconds": 180 }
+				{ "name": "風味介紹與器材說明", "seconds": 120, "instruction": "交流咖啡豆品項、產地、烘焙程度，介紹手沖器材基本配置與功能。" },
+				{ "name": "研磨度與粉水比解析", "seconds": 150, "instruction": "說明不同研磨度對風味的影響，以及建議粉水比，供學習調整參考。" },
+				{ "name": "悶蒸示範與重點", "seconds": 90, "instruction": "現場示範悶蒸操作，闡述其重要性，以及悶蒸時的注水手法與環境控制。" },
+				{ "name": "三段注水技巧講解", "seconds": 180, "instruction": "分析三段式分水沖煮的意義，分別說明各階段注水姿勢與其對風味的影響。" },
+				{ "name": "萃取判讀與調整", "seconds": 150, "instruction": "教導觀察咖啡萃取狀況，可依顏色、流速、味道進行即時調整。" },
+				{ "name": "風味杯測與問答", "seconds": 180, "instruction": "現場分享杯測技巧，讓學員體驗各風味差異，並進行提問互動答疑。" }
 			]
 		},
 		{
 			"name": "高效率吧檯批次沖煮",
 			"steps": [
-				{ "name": "前置溫杯與濾紙", "seconds": 60 },
-				{ "name": "同步悶蒸多杯", "seconds": 45 },
-				{ "name": "交錯第一段注水", "seconds": 60 },
-				{ "name": "交錯第二段注水", "seconds": 60 },
-				{ "name": "終段收尾控制", "seconds": 60 },
-				{ "name": "分裝出杯", "seconds": 90 }
+				{ "name": "前置溫杯與濾紙", "seconds": 60, "instruction": "同時預熱多只分享壺及濾紙，為多人沖煮做好溫度與器材準備。" },
+				{ "name": "同步悶蒸多杯", "seconds": 45, "instruction": "多個濾杯同步倒入熱水做悶蒸，掌握均一萃取起點。" },
+				{ "name": "交錯第一段注水", "seconds": 60, "instruction": "以交錯排程方式進行第一段注水，確保每杯流速一致，分批次掌握時間差。" },
+				{ "name": "交錯第二段注水", "seconds": 60, "instruction": "依照第一段的順序再進行第二輪注水，使所有杯組均勻萃取。" },
+				{ "name": "終段收尾控制", "seconds": 60, "instruction": "最後一輪注水須集中、確實控制注水量以防過萃，取出濾杯控制滴濾時長。" },
+				{ "name": "分裝出杯", "seconds": 90, "instruction": "完成萃取後統一分裝出杯，可先混合後分裝，確保每杯品質穩定。" }
 			]
 		}
 	]
 }
-
