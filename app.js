@@ -493,7 +493,12 @@ class UIController {
 		themes.forEach((theme) => {
 			const opt = document.createElement("option");
 			opt.value = theme.id;
-			opt.textContent = theme.name || theme.id;
+			// 顯示主題名稱和預設配置數量（如果有）
+			let displayText = theme.name || theme.id;
+			if (theme.presetCount !== undefined && theme.presetCount > 0) {
+				displayText += ` (${theme.presetCount} 個配置)`;
+			}
+			opt.textContent = displayText;
 			const tooltip = [theme.description, theme.usage].filter(Boolean).join("｜");
 			opt.title = tooltip || "";
 			sel.appendChild(opt);
@@ -903,11 +908,53 @@ async function loadThemesMetadata() {
 		const res = await fetch("./data/themes.json", { cache: "no-store" });
 		if (!res.ok) throw new Error(`HTTP ${res.status}`);
 		const data = await res.json();
-		return normalizeThemeMetadata(data, fallback);
+		const normalized = normalizeThemeMetadata(data, fallback);
+		// 自動從實際文件中提取主題信息
+		const enrichedThemes = await enrichThemesFromFiles(normalized.themes);
+		return { themes: enrichedThemes, defaultThemeId: normalized.defaultThemeId };
 	} catch (err) {
 		console.error("載入 themes.json 失敗：", err);
 		return fallback;
 	}
+}
+
+// 從實際文件中提取並豐富主題信息
+async function enrichThemesFromFiles(themes) {
+	const enriched = [];
+	for (const theme of themes) {
+		if (!theme.file) {
+			enriched.push(theme);
+			continue;
+		}
+		try {
+			const res = await fetch(`./data/${theme.file}`, { cache: "no-store" });
+			if (!res.ok) {
+				enriched.push(theme);
+				continue;
+			}
+			const fileData = await res.json();
+			// 如果文件中有 theme 欄位，使用它作為名稱
+			if (fileData.theme && typeof fileData.theme === "string") {
+				theme.name = fileData.theme;
+			}
+			// 如果文件中有 description 欄位，使用它
+			if (fileData.description && typeof fileData.description === "string") {
+				theme.description = fileData.description;
+			}
+			// 如果文件中有 usage 欄位，使用它
+			if (fileData.usage && typeof fileData.usage === "string") {
+				theme.usage = fileData.usage;
+			}
+			// 統計該主題有多少個預設配置
+			if (Array.isArray(fileData.presets)) {
+				theme.presetCount = fileData.presets.length;
+			}
+		} catch (err) {
+			console.warn(`無法從文件 ${theme.file} 提取主題信息：`, err);
+		}
+		enriched.push(theme);
+	}
+	return enriched;
 }
 
 async function loadThemePresets(theme, fallbackMap = FALLBACK_PRESET_MAP) {
