@@ -92,6 +92,13 @@
 			"description": "透過冥想、肯定語與視覺化打造富足心態",
 			"usage": "財務目標設定、情緒聚焦、團體工作坊",
 			"file": "wealth_meditation.json"
+		},
+		{
+			"id": "hula_hoop",
+			"name": "呼拉圈運動挑戰",
+			"description": "涵蓋基礎練習、燃脂訓練、花式技巧與耐力挑戰的呼拉圈運動流程",
+			"usage": "居家運動、體能訓練、協調性提升、核心強化",
+			"file": "hula_hoop.json"
 		}
 	]
 }
