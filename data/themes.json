@@ -7,98 +7,112 @@
 			"description": "結合日常運動、養身操與茶飲沖泡的多樣計時範本",
 			"usage": "一般生活節奏安排與品茶體驗",
 			"file": "presets.json",
-			"fallback": true
+			"fallback": true,
+			"presetCount": 12
 		},
 		{
 			"id": "junior_high",
 			"name": "國中課程活動管理",
 			"description": "涵蓋班會、國文、數學、午休與社團訓練的課程節奏設計",
 			"usage": "國中班級課表與活動時間管理",
-			"file": "junior_high_schedule.json"
+			"file": "junior_high_schedule.json",
+			"presetCount": 5
 		},
 		{
 			"id": "tea_master",
 			"name": "茶藝師多品項茶飲",
 			"description": "適用於茶藝實務課程或茶會的多品項沖泡流程",
 			"usage": "專業茶飲沖泡排程與課程示範",
-			"file": "tea_master.json"
+			"file": "tea_master.json",
+			"presetCount": 8
 		},
 		{
 			"id": "coffee_brewing",
 			"name": "手沖咖啡風味沖煮",
 			"description": "依不同烘焙度、處理法與風味需求設計的手沖咖啡節奏",
 			"usage": "咖啡教學、手沖吧檯作業與風味練習",
-			"file": "coffee_brewing.json"
+			"file": "coffee_brewing.json",
+			"presetCount": 8
 		},
 		{
 			"id": "functional_fitness",
 			"name": "多元體適能訓練",
 			"description": "整合 HIIT、核心穩定與功能性訓練流程",
 			"usage": "運動員體能提升、團課編排、居家訓練",
-			"file": "functional_fitness.json"
+			"file": "functional_fitness.json",
+			"presetCount": 5
 		},
 		{
 			"id": "wellness_qigong",
 			"name": "養身健康操",
 			"description": "含八段錦、五行健康操與舒緩伸展的身心養護節奏",
 			"usage": "長輩健康促進、社區課程、日常調氣養身",
-			"file": "wellness_qigong.json"
+			"file": "wellness_qigong.json",
+			"presetCount": 5
 		},
 		{
 			"id": "kettlebell_strength",
 			"name": "壺鈴重量訓練",
 			"description": "依重量與動作組合設計的壺鈴循環訓練",
 			"usage": "力量體能課程、壺鈴進階訓練、居家健身",
-			"file": "kettlebell_strength.json"
+			"file": "kettlebell_strength.json",
+			"presetCount": 5
 		},
 		{
 			"id": "jump_rope_power",
 			"name": "跳繩體能訓練",
 			"description": "節奏跳繩、速度與爆發力多段訓練流程",
 			"usage": "敏捷訓練、心肺強化、團隊暖身",
-			"file": "jump_rope_power.json"
+			"file": "jump_rope_power.json",
+			"presetCount": 5
 		},
 		{
 			"id": "study_routines",
 			"name": "讀書步調規劃",
 			"description": "融合 SQ3R、番茄鐘與主題復盤的學習流程",
 			"usage": "自學規劃、課堂導讀、考試衝刺",
-			"file": "study_pace.json"
+			"file": "study_pace.json",
+			"presetCount": 5
 		},
 		{
 			"id": "eye_acupressure",
 			"name": "眼睛穴道按摩",
 			"description": "針對視覺疲勞的穴位按壓與舒緩練習",
 			"usage": "久視螢幕、課後護眼、視力保健",
-			"file": "eye_acupressure.json"
+			"file": "eye_acupressure.json",
+			"presetCount": 4
 		},
 		{
 			"id": "therapeutic_acupressure",
 			"name": "病症穴道調理",
 			"description": "依常見病症設計的穴道按壓流程",
 			"usage": "慢性痠痛、消化不適、舒緩緊張",
-			"file": "therapeutic_acupressure.json"
+			"file": "therapeutic_acupressure.json",
+			"presetCount": 5
 		},
 		{
 			"id": "blood_pressure_relief",
 			"name": "降血壓調理",
 			"description": "結合呼吸、伸展與穴位按摩的血壓調控節奏",
 			"usage": "居家保健、醫師建議下的日常輔助",
-			"file": "blood_pressure_relief.json"
+			"file": "blood_pressure_relief.json",
+			"presetCount": 4
 		},
 		{
 			"id": "wealth_meditation",
 			"name": "致富冥想活動",
 			"description": "透過冥想、肯定語與視覺化打造富足心態",
 			"usage": "財務目標設定、情緒聚焦、團體工作坊",
-			"file": "wealth_meditation.json"
+			"file": "wealth_meditation.json",
+			"presetCount": 4
 		},
 		{
 			"id": "hula_hoop",
 			"name": "呼拉圈運動挑戰",
 			"description": "涵蓋基礎練習、燃脂訓練、花式技巧與耐力挑戰的呼拉圈運動流程",
 			"usage": "居家運動、體能訓練、協調性提升、核心強化",
-			"file": "hula_hoop.json"
+			"file": "hula_hoop.json",
+			"presetCount": 8
 		}
 	]
 }

@@ -1104,7 +1104,9 @@ function normalizeThemeMetadata(raw, fallbackConfig = DEFAULT_THEME_CONFIG) {
 		const file = item.file ? String(item.file).trim() : "";
 		const presets = Array.isArray(item.presets) ? item.presets : undefined;
 		const fallback = !!item.fallback || !file;
-		themes.push({ id, name, description, usage, file, presets, fallback });
+		// 保留 presetCount 欄位（如果 themes.json 中有定義）
+		const presetCount = item.presetCount !== undefined ? Number(item.presetCount) : undefined;
+		themes.push({ id, name, description, usage, file, presets, fallback, presetCount });
 	});
 	if (!themes.length && fallbackConfig && Array.isArray(fallbackConfig.themes)) {
 		fallbackConfig.themes.forEach((item, idx) => {
@@ -1115,7 +1117,9 @@ function normalizeThemeMetadata(raw, fallbackConfig = DEFAULT_THEME_CONFIG) {
 			const file = item.file ? String(item.file).trim() : "";
 			const presets = Array.isArray(item.presets) ? item.presets : undefined;
 			const fallback = !!item.fallback || !file;
-			themes.push({ id, name, description, usage, file, presets, fallback });
+			// 保留 presetCount 欄位（如果 fallbackConfig 中有定義）
+			const presetCount = item.presetCount !== undefined ? Number(item.presetCount) : undefined;
+			themes.push({ id, name, description, usage, file, presets, fallback, presetCount });
 		});
 	}
 	let resolvedDefault = defaultThemeId;
